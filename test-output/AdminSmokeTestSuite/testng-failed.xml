@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [AdminSmokeTestSuite]">
+  <test name="AdminTest(failed)">
+    <classes>
+      <class name="admin.sothelabs.testCases.Consignment">
+        <methods>
+          <include name="editConsignment"/>
+          <include name="startSession"/>
+          <include name="afterMethodInvocation"/>
+          <include name="quitSession"/>
+        </methods>
+      </class> <!-- admin.sothelabs.testCases.Consignment -->
+      <class name="admin.sothelabs.testCases.CreateObject">
+        <methods>
+          <include name="createNewObject"/>
+          <include name="afterMethodInvocation"/>
+          <include name="editAndSaveObject"/>
+        </methods>
+      </class> <!-- admin.sothelabs.testCases.CreateObject -->
+    </classes>
+  </test> <!-- AdminTest(failed) -->
+</suite> <!-- Failed suite [AdminSmokeTestSuite] -->

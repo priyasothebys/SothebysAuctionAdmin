@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AdminSmokeTestSuite">
+	<test thread-count="1" name="AdminTest">
+		<classes>
+		  <class name="admin.sothelabs.testCases.Consignment">
+				<methods>
+				<include name="createNewConsignment" />
+				 <include name="editConsignment" />
+				</methods> 
+			</class> 
+			<class name="admin.sothelabs.testCases.CreateObject">
+				<methods>
+				<include name="createNewObject" />
+				 <include name="editAndSaveObject" />
+				</methods> 
+			</class> 
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
