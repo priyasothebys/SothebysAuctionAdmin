@@ -26,7 +26,7 @@ public class Auction extends SetupUtils{
 	
 	@Test(priority = 1, enabled = false)
 	public void createNewAuction() throws InterruptedException, IOException, ParseException {
-		System.out.println("Test");
+
 		Assert.assertEquals(Pages.consignmentPage().newButton.getText(), "NEW");
 		Pages.consignmentPage().newButton.click();
 		waitforElement(dr, Pages.auctionPage().sidebarMenuTimedAuction);
