@@ -10,10 +10,10 @@ import java.util.List;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -26,6 +26,7 @@ public class Auction extends SetupUtils{
 	
 	@Test(priority = 1, enabled = false)
 	public void createNewAuction() throws InterruptedException, IOException, ParseException {
+		System.out.println("Test");
 		Assert.assertEquals(Pages.consignmentPage().newButton.getText(), "NEW");
 		Pages.consignmentPage().newButton.click();
 		waitforElement(dr, Pages.auctionPage().sidebarMenuTimedAuction);
