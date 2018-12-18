@@ -107,53 +107,7 @@ public class SetupUtils {
 		
 	}
 	
-	/*XSSFWorkbook wb ;
-	XSSFSheet sheet;
 	
-	
-	public void excelDataConfig(String excelPath) {
-		
-		try {
-			File src  = new File(excelPath);
-			FileInputStream fis = new FileInputStream(src);
-			wb = new XSSFWorkbook(fis);
-		} 
-		catch (IOException e) {
-			System.out.println(e.getMessage());
-		}
-		
-	}
-	
-	public int getNumOfRows(String sheetname){
-		sheet = wb.getSheet(sheetname);
-		int num_row = sheet.getLastRowNum();
-		return num_row;
-		
-	}
-	
-	public String getData(String sheetname, int row, int column){
-		sheet = wb.getSheet(sheetname);
-		String data = sheet.getRow(row).getCell(column).getStringCellValue();
-		return data;
-		
-	}
-	
-	public void writeData(String sheetname, int row, int column, String src1){
-		sheet = wb.getSheet(sheetname);
-		sheet.getRow(row).createCell(column).setCellValue("Pass");
-		FileOutputStream fout;
-		try {
-			fout = new FileOutputStream(src1);
-			wb.write(fout);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	
-	public void closeExcel() throws IOException{
-		wb.close();
-	}*/
 		
 
 	
