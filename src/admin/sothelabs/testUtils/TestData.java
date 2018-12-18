@@ -12,12 +12,13 @@ public class TestData {
 	public static final String PASSWORD = "Monroeny10950";
 	
 	// *****************Consignment datas--------------------
-	public static final String ACCOUNTID = "10190";
+	public static final String ACCOUNTID = "30990705";
 	public static final String OWNDERTYPE = "Executor";
 	public static final String NOTES = "This is Test notes created by Automation script";
 	public static final String SOURCE_OFFICE = "Thailand";
 	public static String CONSIGNMENT_TITLE ;
 	public static final String CONSIGNOR_NAME = "QA Automation";
+	public static final String IMAGE_PATH = "//Users//priya.ganesan//Documents//Browsers//abstract-art.jpg";
 	
 	
 	

@@ -89,16 +89,18 @@ public class CreateObject extends SetupUtils{
 	}
 	
 	
+	
+	
 	@Test(priority = 2, enabled = true)
 	public void editAndSaveObject() throws InterruptedException{
-		Thread.sleep(5000);
-		dr.navigate().refresh();
+		Thread.sleep(2000);
+		/*dr.navigate().refresh();
 		Pages.consignmentPage().sothebysLogo.click();
 		waitforElement(dr, Pages.objectPage().navItemObject);
 		Pages.objectPage().navItemObject.click();
 		Pages.consignmentPage().searchField.sendKeys(title);
 		Pages.consignmentPage().searchSubmitButton.click();
-		Pages.consignmentPage().searchResultItem.click();
+		Pages.consignmentPage().searchResultItem.click();*/
 		
 		String title_edit = Pages.objectPage().titleOfWorkValue.getText();
 		String english_title_edit = Pages.objectPage().englishTitleValue.getText();
@@ -126,27 +128,31 @@ public class CreateObject extends SetupUtils{
 		Pages.objectPage().literatureTextEdit.clear();
 		Pages.objectPage().literatureTextEdit.sendKeys(literature_edit+Keys.ENTER);
 		Thread.sleep(2000);
-		/*Pages.objectPage().dimensionTextEdit.clear();
+		Pages.objectPage().dimensionTextEdit.clear();
 		Pages.objectPage().dimensionTextEdit.sendKeys("test");
 		
 		Pages.objectPage().materialsListBox.sendKeys("acrylic paint"+Keys.ENTER);
+		Pages.objectPage().heightTextEdit.clear();
 		Pages.objectPage().heightTextEdit.sendKeys("111");
 		Select height_dropdown = new Select(Pages.objectPage().heightDropdown);
 		height_dropdown.selectByVisibleText("cm");
+		Pages.objectPage().widthTextEdit.clear();
 		Pages.objectPage().widthTextEdit.sendKeys("111");
 		Select width_dropdown = new Select(Pages.objectPage().widthDropdown);
 		width_dropdown.selectByVisibleText("mm");
+		Pages.objectPage().depthTextEdit.clear();
 		Pages.objectPage().depthTextEdit.sendKeys("111");
 		Select depth_dropdown = new Select(Pages.objectPage().depthDropdown);
 		depth_dropdown.selectByVisibleText("cm");
+		Pages.objectPage().lengthTextEdit.clear();
 		Pages.objectPage().lengthTextEdit.sendKeys("111");
 		Select length_dropdown = new Select(Pages.objectPage().lengthDropdown);
 		length_dropdown.selectByVisibleText("cm");
-		
+		Pages.objectPage().diameterTextEdit.clear();
 		Pages.objectPage().diameterTextEdit.sendKeys("111");
 		Select diameter_dropdown = new Select(Pages.objectPage().diameterDropdown);
 		diameter_dropdown.selectByVisibleText("cm");
-		
+		Pages.objectPage().weightTextEdit.clear();
 		Pages.objectPage().weightTextEdit.sendKeys("111");
 		Select weight_dropdown = new Select(Pages.objectPage().weightDropdown);
 		weight_dropdown.selectByVisibleText("kg");
@@ -154,10 +160,9 @@ public class CreateObject extends SetupUtils{
 		Pages.objectPage().signatureDetailsTextEdit.sendKeys("test");
 		Pages.objectPage().GenreListBox.sendKeys("Himalayan"+Keys.ENTER);
 		//----------Research section--------------
-		
 		Pages.objectPage().yearTextEdit.sendKeys("1800");
 		Select date_unit_dropdown = new Select(Pages.objectPage().unitDropdown);
-		date_unit_dropdown.selectByValue("AD");*/
+		date_unit_dropdown.selectByValue("AD");
 		Thread.sleep(2000);
 		Pages.consignmentPage().saveButton.click();
 		Thread.sleep(3000);
@@ -180,66 +185,6 @@ public class CreateObject extends SetupUtils{
 
 		
 
-//		getNumOfRows("CreateObject")
-//		for(int i=876; i <= getNumOfRows("CreateObject") ; i++){
-//			String data = getData("CreateObject", i , 0);
-//			dr.findElement(By.xpath("//input[@placeholder = 'Title of work']")).sendKeys(data);
-//
-//			WebElement dropdown = dr.findElement(By.xpath("//input[@placeholder = 'Creator']/ancestor::div[@class = 'sc-ckVGcZ dtZFfk sc-kAzzGY cCHKYQ']"));
-//			Actions actions = new Actions(dr);
-//			actions.moveToElement(dropdown).click();
-//			Thread.sleep(1000);
-//			actions.sendKeys(getData("CreateObject", i , 1));
-//			actions.sendKeys(Keys.ENTER);
-//			actions.build().perform();
-//			Thread.sleep(1000);
-//			dr.findElement(By.xpath("//div[@data-placeholder = 'Description']")).sendKeys(getData("CreateObject", i , 2));
-//			
-//			js.executeScript("scroll(0,250);");
-//
-//			//dr.findElement(By.xpath("//div[@data-placeholder = 'Description']")).sendKeys(Keys.ENTER);
-//			//webdriver.executeScript("document.getElementById('elementID').setAttribute('value', 'new value for element')");
-//			Thread.sleep(1000);
-//			Select dropdown_gender = new Select(dr.findElement(By.xpath("//select[@name = 'select']")));
-//			dropdown_gender.selectByVisibleText("Generic");
-//			Thread.sleep(3000);
-//			
-//			
-//			
-//			dr.findElement(By.xpath("//div[@data-placeholder = 'Provenance']")).sendKeys(getData("CreateObject", i , 10));
-//			dr.findElement(By.xpath("//div[@data-placeholder = 'Provenance']")).sendKeys(Keys.ENTER);
-//			Thread.sleep(1000);
-//			
-//			dr.findElement(By.xpath("//div[@data-placeholder = 'Exhibition']")).sendKeys(getData("CreateObject", i , 9));
-//			//dr.findElement(By.xpath("//div[@data-placeholder = 'Exhibition']")).sendKeys(Keys.ENTER);
-//			Thread.sleep(1000);
-//			dr.findElement(By.xpath("//div[@data-placeholder = 'Literature']")).sendKeys(getData("CreateObject", i , 7));
-//			//dr.findElement(By.xpath("//div[@data-placeholder = 'Literature']")).sendKeys(Keys.ENTER);
-//			Thread.sleep(1000);
-//			
-//			dr.findElement(By.xpath("//input[@placeholder = 'Executed In']")).sendKeys(getData("CreateObject", i , 8));
-//			//dr.findElement(By.xpath("//input[@placeholder = 'Executed In']")).sendKeys(Keys.ENTER);
-//			
-//			Thread.sleep(1000);
-//			dr.findElement(By.xpath("//button[contains(text(), 'Create')]")).click();
-//
-//			if(dr.findElements(By.xpath("//button[contains(text(), 'Edit')]")).size() > 0){
-//				writeData("CreateObject", i, 11, "//Users//priya.ganesan//Documents//ExcelSheet//Workbook3.xlsx");
-//			}else{
-//				System.out.println("Fails at creator : " + data);
-//			}
-//
-//			System.out.println(data);
-//			Thread.sleep(3000);
-//			dr.findElement(By.xpath("//img[@class = 'logo']")).click();
-//			Thread.sleep(2000);
-//			waitforElement(dr,dr.findElement(By.xpath("//button[@class = 'sc-gPzReC kbNpvG']")));
-//			dr.findElement(By.xpath("//button[@class = 'sc-gPzReC kbNpvG']")).click();
-//			waitforElement(dr, dr.findElement(By.xpath("//ul/li/a[contains(@href, 'creators/new')]")));
-//			dr.findElement(By.xpath("//ul/li/a[contains(@href, '/objects/new')]")).click();
-//			Thread.sleep(2000);
-//
-//		}
-	
+
 
 }

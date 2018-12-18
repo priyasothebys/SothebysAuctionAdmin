@@ -56,37 +56,37 @@ public class ObjectPageElements {
 	@FindBy(xpath = "//input[@placeholder = 'Height']")
 	public WebElement heightTextEdit;
 	
-	@FindBy(xpath = "//input[@placeholder = 'Height']/ancestor::div[@class = 'sc-eLExRp DfgCq']/following-sibling::div/div/select")
+	@FindBy(xpath = "//input[@placeholder = 'Height']/parent::div/parent::div/following-sibling::div/div/select")
 	public WebElement heightDropdown;
 	
 	@FindBy(xpath = "//input[@placeholder = 'Width']")
 	public WebElement widthTextEdit;
 	
-	@FindBy(xpath = "//input[@placeholder = 'Width']/ancestor::div[@class = 'sc-eLExRp DfgCq']/following-sibling::div/div/select")
+	@FindBy(xpath = "//input[@placeholder = 'Width']/parent::div/parent::div/following-sibling::div/div/select")
 	public WebElement widthDropdown;
 	
 	@FindBy(xpath = "//input[@placeholder = 'Depth']")
 	public WebElement depthTextEdit;
 	
-	@FindBy(xpath = "//input[@placeholder = 'Depth']/ancestor::div[@class = 'sc-eLExRp DfgCq']/following-sibling::div/div/select")
+	@FindBy(xpath = "//input[@placeholder = 'Depth']/parent::div/parent::div/following-sibling::div/div/select")
 	public WebElement depthDropdown;
 	
 	@FindBy(xpath = "//input[@placeholder = 'Length']")
 	public WebElement lengthTextEdit;
 	
-	@FindBy(xpath = "//input[@placeholder = 'Length']/ancestor::div[@class = 'sc-eLExRp DfgCq']/following-sibling::div/div/select")
+	@FindBy(xpath = "//input[@placeholder = 'Length']/parent::div/parent::div/following-sibling::div/div/select")
 	public WebElement lengthDropdown;
 	
 	@FindBy(xpath = "//input[@placeholder = 'Diameter']")
 	public WebElement diameterTextEdit;
 	
-	@FindBy(xpath = "//input[@placeholder = 'Diameter']/ancestor::div[@class = 'sc-eLExRp DfgCq']/following-sibling::div/div/select")
+	@FindBy(xpath = "//input[@placeholder = 'Diameter']/parent::div/parent::div/following-sibling::div/div/select")
 	public WebElement diameterDropdown;
 	
 	@FindBy(xpath = "//input[@placeholder = 'Weight']")
 	public WebElement weightTextEdit;
 	
-	@FindBy(xpath = "//input[@placeholder = 'Weight']/ancestor::div[@class = 'sc-eLExRp DfgCq']/following-sibling::div/div/select")
+	@FindBy(xpath = "//input[@placeholder = 'Weight']/parent::div/parent::div/following-sibling::div/div/select")
 	public WebElement weightDropdown;
 	
 	@FindBy(xpath = "//input[@id = 'year']")

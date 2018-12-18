@@ -48,7 +48,7 @@ public class ConsignmentPageElements extends SetupUtils {
 	@FindBy(xpath = "//h1[contains(text(), \"Welcome to Sotheby's Admin\")]")
 	public WebElement adminWelcomeHeader;
 	
-	@FindBy(xpath = "//button[@class = 'sc-jXQZqI byONtB']")
+	@FindBy(xpath = "//button/span[contains(text(), 'New')]")
 	public WebElement newButton;
 	
 	@FindBy(xpath = "//h1[@class = 'css-1cbuwhv']")

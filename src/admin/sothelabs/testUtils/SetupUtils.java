@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Properties;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
@@ -173,6 +174,12 @@ public class SetupUtils {
 			//System.out.println(Actual_list);
 		}
 		return Actual_list;
+	}
+	
+	public int generateRandomNumber(){
+		Random rnd = new Random();
+		int n = 1000 + rnd.nextInt(9000);
+		return n;
 	}
 	
 

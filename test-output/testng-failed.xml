@@ -6,9 +6,8 @@
       <class name="admin.sothelabs.testCases.Auction">
         <methods>
           <include name="startSession"/>
-          <include name="afterMethodInvocation"/>
-          <include name="quitSession"/>
-          <include name="addLotsToAuction"/>
+          <include name="createAndPublishAuction"/>
+          <include name="editAuction"/>
         </methods>
       </class> <!-- admin.sothelabs.testCases.Auction -->
     </classes>
