@@ -31,7 +31,7 @@ public class CreateObject extends SetupUtils{
 		//Thread.sleep(5000);
 		//WebElement UploadImg = dr.findElement(By.xpath("//input[@type = 'file']"));
 		//Pages.objectPage().uploadImage.sendKeys("//Users//priya.ganesan//Documents//Browsers//abstract-art.jpg");
-		Pages.objectPage().uploadImage.sendKeys("//usr//bin/pexels-photo-990824.jpeg?cs=srgb");
+		Pages.objectPage().uploadImage.sendKeys("//usr//bin/pexels-photo-990824.jpeg");
 		Thread.sleep(2000);
 		//-----------------Details---------------------
 		Select dropdown_gender = new Select(Pages.objectPage().objectDropdown);
