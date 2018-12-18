@@ -70,7 +70,7 @@ public class SetupUtils {
 
 	@AfterSuite
 	public void quitSession() {
-		//dr.quit();
+		dr.quit();
 	}
 	
 	public String generateRandomEmail() {
