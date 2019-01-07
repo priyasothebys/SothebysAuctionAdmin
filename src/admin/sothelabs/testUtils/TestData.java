@@ -18,7 +18,8 @@ public class TestData {
 	public static final String SOURCE_OFFICE = "Thailand";
 	public static String CONSIGNMENT_TITLE ;
 	public static final String CONSIGNOR_NAME = "QA Automation";
-	public static final String IMAGE_PATH = "//Users//priya.ganesan//Documents//Browsers//abstract-art.jpg";
+	public static final String IMAGE_PATH_MAC = "//Users//priya.ganesan//Documents//Browsers//abstract-art.jpg";
+	public static final String IMAGE_PATH_LINUX = "//usr//bin/pexels-photo-990824.jpeg";
 	
 	
 	

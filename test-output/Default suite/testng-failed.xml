@@ -3,13 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="admin.sothelabs.testCases.Auction">
+      <class name="admin.sothelabs.testCases.Consignment">
         <methods>
+          <include name="editConsignment"/>
           <include name="startSession"/>
-          <include name="createAndPublishAuction"/>
-          <include name="editAuction"/>
+          <include name="removeObjectsFromConsignment"/>
+          <include name="afterMethodInvocation"/>
+          <include name="addObjectsToConsignment"/>
+          <include name="quitSession"/>
         </methods>
-      </class> <!-- admin.sothelabs.testCases.Auction -->
+      </class> <!-- admin.sothelabs.testCases.Consignment -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

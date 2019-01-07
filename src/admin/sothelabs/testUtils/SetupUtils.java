@@ -46,11 +46,8 @@ public class SetupUtils {
 
 	public WebDriver initializeDriver() throws InterruptedException {
 		if (platform.equals("Mac OS X")) {
-			//TestData.ENVT = "stage";
 		System.setProperty("webdriver.chrome.driver",
 					"//Users//priya.ganesan//Documents//Browsers//chromedriver 2");
-//			System.setProperty("webdriver.chrome.driver",
-//					"//Users//priya.ganesan//Documents//Browsers//geckodriver 3");
 		}else{
 			TestData.ENVT = System.getProperty("Environment");
 			System.setProperty("webdriver.chrome.driver", "//usr//bin//chromedriver");
@@ -60,6 +57,16 @@ public class SetupUtils {
 		System.out.println("Automation Suite running in Envt : " + TestData.STAGE_URL);
 		dr.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		return dr;	
+	}
+	
+	public String imagePathBasedOnEnvt(){
+		String path;
+		if(platform.equals("Mac OS X")){
+			path = TestData.IMAGE_PATH_MAC;
+		}else{
+			path = TestData.IMAGE_PATH_LINUX;
+		}
+		return path;	
 	}
 	
 	@BeforeSuite

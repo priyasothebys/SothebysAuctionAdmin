@@ -42,11 +42,11 @@ public class Auction extends SetupUtils{
 		Pages.auctionPage().bidIncrementListBox.click();
 		Thread.sleep(2000);
 		Pages.auctionPage().bidIncrementItem.click();
-		Pages.objectPage().uploadImage.sendKeys(TestData.IMAGE_PATH);
+		Pages.objectPage().uploadImage.sendKeys(imagePathBasedOnEnvt());
 		//Pages.objectPage().uploadImage.sendKeys("//usr//bin//pexels-photo-990824.jpeg");
 		Thread.sleep(1000);
 		Pages.consignmentPage().createButton.click();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		Assert.assertEquals(Pages.auctionPage().detailsLink.getAttribute("class"), "isActive");
 		Assert.assertEquals(Pages.auctionPage().auctionTitleLabel.getText(), auction_title);
 		System.out.println("Auction Created Successfully : " + auction_title);
@@ -143,7 +143,7 @@ public class Auction extends SetupUtils{
 		dr.findElement(By.xpath("//input[@placeholder = 'Lot Number']")).sendKeys("1");
 		Thread.sleep(1000);
 		dr.findElement(By.xpath("//div[contains(text(), 'Starting Bid')]/parent::div/following-sibling::div/div/div/div/div/input[@type = 'number']")).sendKeys("50");
-		Pages.objectPage().uploadImage.sendKeys(TestData.IMAGE_PATH);
+		Pages.objectPage().uploadImage.sendKeys(imagePathBasedOnEnvt());
 		Pages.consignmentPage().saveButton.click();
 		dr.findElement(By.xpath("//button[contains(text(), 'Close')]")).click();
 		//select lot and publish-------------

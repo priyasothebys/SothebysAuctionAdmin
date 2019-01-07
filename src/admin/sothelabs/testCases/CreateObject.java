@@ -31,7 +31,7 @@ public class CreateObject extends SetupUtils{
 		Pages.objectPage().descriptionTextEdit.sendKeys("test"+Keys.ENTER);
 		//Thread.sleep(5000);
 		//WebElement UploadImg = dr.findElement(By.xpath("//input[@type = 'file']"));
-		Pages.objectPage().uploadImage.sendKeys(TestData.IMAGE_PATH);
+		Pages.objectPage().uploadImage.sendKeys(imagePathBasedOnEnvt());
 		//Pages.objectPage().uploadImage.sendKeys("//usr//bin/pexels-photo-990824.jpeg");
 		Thread.sleep(2000);
 		//-----------------Details---------------------
@@ -114,6 +114,7 @@ public class CreateObject extends SetupUtils{
 		Pages.consignmentPage().editButton.click();
 		Thread.sleep(2000);
 		Pages.objectPage().titleOfWork.sendKeys("-edit");
+		Thread.sleep(1000);
 		Pages.objectPage().englishTitle.sendKeys("-edit");
 //		Pages.objectPage().creatorListBox.sendKeys(creator_edit+ Keys.ENTER);
 		Thread.sleep(2000);
