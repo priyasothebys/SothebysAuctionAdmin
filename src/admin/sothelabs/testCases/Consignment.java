@@ -103,12 +103,13 @@ public class Consignment extends SetupUtils {
 		Pages.consignmentPage().navItemConsignment.click();
 		Pages.consignmentPage().searchField.sendKeys(consignment_title);
 		Pages.consignmentPage().searchSubmitButton.click();
+		Thread.sleep(2000);
 		Pages.consignmentPage().searchResultItem.click();
 		Assert.assertEquals(Pages.consignmentPage().consignment_header.getText(), TestData.CONSIGNOR_NAME+" edit");
 		dr.findElement(By.xpath("//a[contains(text(), 'Properties')]")).click();
 		dr.findElement(By.xpath("//a[contains(text(), 'New Property')]")).click();
 		Assert.assertEquals(dr.findElement(By.xpath("//h1[@class = 'css-1cbuwhv']")).getText(), "Add Property");
-		dr.findElement(By.xpath("//input[@placeholder = 'Search']")).sendKeys("Test Object");
+		dr.findElement(By.xpath("//input[@placeholder = 'Search']")).sendKeys("QA Test Object");
 		Thread.sleep(1000);
 		dr.findElement(By.xpath("//div[@class = 'css-17pn9uc']/h4[contains(text(),'Test Object')]")).click();
 		dr.findElement(By.xpath("//input[@placeholder = 'Object type']/ancestor::div[@class = 'sc-cSHVUG sc-dxgOiQ cFmSFh']")).click();
@@ -136,11 +137,14 @@ public class Consignment extends SetupUtils {
 		Pages.consignmentPage().navItemConsignment.click();
 		Pages.consignmentPage().searchField.sendKeys(consignment_title);
 		Pages.consignmentPage().searchSubmitButton.click();
+		Thread.sleep(2000);
 		Pages.consignmentPage().searchResultItem.click();
 		dr.findElement(By.xpath("//a[contains(text(), 'Properties')]")).click();
 		Assert.assertEquals(dr.findElement(By.xpath("//div[contains(text(), 'Total Properties')]/following-sibling::div/h1")).getText(), "1");
 		dr.findElement(By.xpath("//tbody/tr/th")).click();
 		dr.findElement(By.xpath("//a[contains(text(),'Delete')]")).click();
+		//Thread.sleep(2000);
+		waitforElement(dr, dr.findElement(By.xpath("//h3[contains(text(), 'No Properties have been added to this Consignment')]")));
 		Assert.assertTrue(dr.findElement(By.xpath("//h3[contains(text(), 'No Properties have been added to this Consignment')]")).isDisplayed());
 	}	
 	

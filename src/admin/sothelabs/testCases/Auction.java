@@ -42,10 +42,11 @@ public class Auction extends SetupUtils{
 		Pages.auctionPage().bidIncrementListBox.click();
 		Thread.sleep(2000);
 		Pages.auctionPage().bidIncrementItem.click();
-		//Pages.objectPage().uploadImage.sendKeys(TestData.IMAGE_PATH);
-		Pages.objectPage().uploadImage.sendKeys("//usr//bin//pexels-photo-990824.jpeg");
+		Pages.objectPage().uploadImage.sendKeys(TestData.IMAGE_PATH);
+		//Pages.objectPage().uploadImage.sendKeys("//usr//bin//pexels-photo-990824.jpeg");
 		Thread.sleep(1000);
-		Pages.consignmentPage().createButton.click();	
+		Pages.consignmentPage().createButton.click();
+		Thread.sleep(2000);
 		Assert.assertEquals(Pages.auctionPage().detailsLink.getAttribute("class"), "isActive");
 		Assert.assertEquals(Pages.auctionPage().auctionTitleLabel.getText(), auction_title);
 		System.out.println("Auction Created Successfully : " + auction_title);
@@ -73,7 +74,7 @@ public class Auction extends SetupUtils{
 	
 	
 	
-	@Test(priority = 3, enabled = false)
+	@Test(priority = 3, enabled = true)
 	public void addAndRemoveLots() throws InterruptedException, IOException, ParseException {
 		dr.navigate().refresh();
 		Pages.consignmentPage().sothebysLogo.click();
@@ -81,6 +82,7 @@ public class Auction extends SetupUtils{
 		Pages.auctionPage().navItemAuction.click();
 		Pages.consignmentPage().searchField.sendKeys(auction_title);
 		Pages.consignmentPage().searchSubmitButton.click();
+		Thread.sleep(2000);
 		Pages.consignmentPage().searchResultItem.click();
 		Pages.auctionPage().lotsLink.click();
 		dr.findElement(By.xpath("//button[@data-test-id = 'add-to-auction-button']/parent::div/div/form/div/input[@type = 'search']")).sendKeys("QA Auto Script"+Keys.ENTER);
@@ -113,7 +115,7 @@ public class Auction extends SetupUtils{
 	}
 	
 	
-	@Test(priority = 4, enabled = false)
+	@Test(priority = 4, enabled = true)
 	public void addAndPublishLots() throws InterruptedException, IOException, ParseException {
 		dr.navigate().refresh();
 		Pages.consignmentPage().sothebysLogo.click();
@@ -121,6 +123,7 @@ public class Auction extends SetupUtils{
 		Pages.auctionPage().navItemAuction.click();
 		Pages.consignmentPage().searchField.sendKeys(auction_title);
 		Pages.consignmentPage().searchSubmitButton.click();
+		Thread.sleep(2000);
 		Pages.consignmentPage().searchResultItem.click();
 		Pages.auctionPage().lotsLink.click();
 		dr.findElement(By.xpath("//button[@data-test-id = 'add-to-auction-button']/parent::div/div/form/div/input[@type = 'search']")).sendKeys("QA Auto Script"+Keys.ENTER);
@@ -128,13 +131,13 @@ public class Auction extends SetupUtils{
 		//WebElement add_lot = dr.findElement(By.xpath("//p[@data-test-id = 'artist-name'][contains(text(), 'QA Auto script object')]"));
 		action.moveToElement(dr.findElement(By.xpath("//p[@data-test-id = 'artist-name'][contains(text(), 'QA Auto script object')]"))).build().perform();
 		//button[@contains(text(),'VIEW DETAILS')]/parent::div/parent::div/div/label
-		action.moveToElement(dr.findElement(By.xpath("//*/span/div/div/div[1]/div[1]/div[1]/div/label"))).click().build().perform();
+		action.moveToElement(dr.findElements(By.xpath("//*/span/div/div/div[1]/div[1]/div[1]/div/label")).get(1)).click().build().perform();
 		//action.moveToElement(dr.findElement(By.xpath("//label[@class = 'css-1u3v222']"))).click().build().perform();
 		Assert.assertTrue(dr.findElement(By.xpath("//button[@data-test-id = 'add-to-auction-button']")).isEnabled());
 		dr.findElement(By.xpath("//button[@data-test-id = 'add-to-auction-button']")).click();
-		//Thread.sleep(2000);
-		WebElement we = dr.findElement(By.xpath("//div[@data-test-id = 'card']"));
-		action.moveToElement(we).build().perform();
+		Thread.sleep(2000);
+		WebElement card = dr.findElement(By.xpath("//div[@data-test-id = 'card']"));
+		action.moveToElement(card).build().perform();
 		Thread.sleep(2000);
 		action.moveToElement(dr.findElement(By.xpath("//button[@data-test-id = 'Lot Object']"))).click().build().perform();
 		dr.findElement(By.xpath("//input[@placeholder = 'Lot Number']")).sendKeys("1");
