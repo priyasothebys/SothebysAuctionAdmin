@@ -37,10 +37,11 @@ public class Consignment extends SetupUtils {
 		actions.build().perform();
 		Pages.consignmentPage().consignmentTitle.sendKeys(consignment_title);
 		Pages.consignmentPage().consignmentNotes.sendKeys(TestData.NOTES);	
+		System.out.println("Consignment is successfully created : " + consignment_title);
 		Thread.sleep(2000);
-		actions.moveToElement(dr.findElement(By.xpath("//div[@class = 'css-1gfzdq7']"))).click().build().perform();
+		actions.moveToElement(Pages.consignmentPage().createButton).click().build().perform();
 		//dr.findElement(By.xpath("//div[@class = 'css-1gfzdq7']")).click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		//Pages.consignmentPage().createButton.click();
 		//------------Verify newly created consignment data values-------------
 		Assert.assertEquals(Pages.consignmentPage().consignment_header.getText(), TestData.CONSIGNOR_NAME);
