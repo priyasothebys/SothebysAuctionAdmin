@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="9" passed="9">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="AdminSmokeTestSuite" duration-ms="324004" started-at="2019-01-08T15:43:59Z" finished-at="2019-01-08T15:49:23Z">
+  <suite name="Default suite" duration-ms="138918" started-at="2019-01-08T16:35:18Z" finished-at="2019-01-08T16:37:37Z">
     <groups>
     </groups>
-    <test name="AdminSmokeTest" duration-ms="324004" started-at="2019-01-08T15:43:59Z" finished-at="2019-01-08T15:49:23Z">
+    <test name="Default test" duration-ms="138918" started-at="2019-01-08T16:35:18Z" finished-at="2019-01-08T16:37:37Z">
       <class name="admin.sothelabs.testCases.Consignment">
-        <test-method status="PASS" signature="createNewConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@668bc3d5]" name="createNewConsignment" duration-ms="26551" started-at="2019-01-08T10:44:52Z" finished-at="2019-01-08T10:45:18Z">
+        <test-method status="PASS" signature="startSession()[pri:0, instance:admin.sothelabs.testCases.Consignment@506e6d5e]" name="startSession" is-config="true" duration-ms="13632" started-at="2019-01-08T11:35:05Z" finished-at="2019-01-08T11:35:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method status="PASS" signature="createNewConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@506e6d5e]" name="createNewConsignment" duration-ms="27750" started-at="2019-01-08T11:35:18Z" finished-at="2019-01-08T11:35:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewConsignment -->
-        <test-method status="PASS" signature="editConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@668bc3d5]" name="editConsignment" duration-ms="24328" started-at="2019-01-08T10:45:18Z" finished-at="2019-01-08T10:45:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editConsignment -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Consignment@668bc3d5]" name="afterMethodInvocation" is-config="true" duration-ms="0" started-at="2019-01-08T10:45:18Z" finished-at="2019-01-08T10:45:18Z">
+        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Consignment@506e6d5e]" name="afterMethodInvocation" is-config="true" duration-ms="2" started-at="2019-01-08T11:35:46Z" finished-at="2019-01-08T11:35:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=createNewConsignment status=SUCCESS method=Consignment.createNewConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@668bc3d5] output={null}]]]>
+                <![CDATA[[TestResult name=createNewConsignment status=SUCCESS method=Consignment.createNewConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@506e6d5e] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -31,11 +31,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodInvocation -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Consignment@668bc3d5]" name="afterMethodInvocation" is-config="true" duration-ms="0" started-at="2019-01-08T10:45:43Z" finished-at="2019-01-08T10:45:43Z">
+        <test-method status="PASS" signature="editConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@506e6d5e]" name="editConsignment" duration-ms="24919" started-at="2019-01-08T11:35:46Z" finished-at="2019-01-08T11:36:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editConsignment -->
+        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Consignment@506e6d5e]" name="afterMethodInvocation" is-config="true" duration-ms="0" started-at="2019-01-08T11:36:11Z" finished-at="2019-01-08T11:36:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=editConsignment status=SUCCESS method=Consignment.editConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@668bc3d5] output={null}]]]>
+                <![CDATA[[TestResult name=editConsignment status=SUCCESS method=Consignment.editConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@506e6d5e] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -47,19 +51,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodInvocation -->
-        <test-method status="PASS" signature="addObjectsToConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@668bc3d5]" name="addObjectsToConsignment" duration-ms="64970" started-at="2019-01-08T10:45:43Z" finished-at="2019-01-08T10:46:48Z">
+        <test-method status="PASS" signature="addObjectsToConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@506e6d5e]" name="addObjectsToConsignment" duration-ms="65833" started-at="2019-01-08T11:36:11Z" finished-at="2019-01-08T11:37:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addObjectsToConsignment -->
-        <test-method status="PASS" signature="removeObjectsFromConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@668bc3d5]" name="removeObjectsFromConsignment" duration-ms="41757" started-at="2019-01-08T10:46:48Z" finished-at="2019-01-08T10:47:29Z">
+        <test-method status="PASS" signature="removeObjectsFromConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@506e6d5e]" name="removeObjectsFromConsignment" duration-ms="20395" started-at="2019-01-08T11:37:17Z" finished-at="2019-01-08T11:37:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeObjectsFromConsignment -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Consignment@668bc3d5]" name="afterMethodInvocation" is-config="true" duration-ms="0" started-at="2019-01-08T10:46:48Z" finished-at="2019-01-08T10:46:48Z">
+        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Consignment@506e6d5e]" name="afterMethodInvocation" is-config="true" duration-ms="0" started-at="2019-01-08T11:37:17Z" finished-at="2019-01-08T11:37:17Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addObjectsToConsignment status=SUCCESS method=Consignment.addObjectsToConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@668bc3d5] output={null}]]]>
+                <![CDATA[[TestResult name=addObjectsToConsignment status=SUCCESS method=Consignment.addObjectsToConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@506e6d5e] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -71,11 +75,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodInvocation -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Consignment@668bc3d5]" name="afterMethodInvocation" is-config="true" duration-ms="0" started-at="2019-01-08T10:47:29Z" finished-at="2019-01-08T10:47:29Z">
+        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Consignment@506e6d5e]" name="afterMethodInvocation" is-config="true" duration-ms="0" started-at="2019-01-08T11:37:37Z" finished-at="2019-01-08T11:37:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=removeObjectsFromConsignment status=SUCCESS method=Consignment.removeObjectsFromConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@668bc3d5] output={null}]]]>
+                <![CDATA[[TestResult name=removeObjectsFromConsignment status=SUCCESS method=Consignment.removeObjectsFromConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@506e6d5e] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -87,119 +91,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodInvocation -->
-      </class> <!-- admin.sothelabs.testCases.Consignment -->
-      <class name="admin.sothelabs.testCases.CreateObject">
-        <test-method status="PASS" signature="startSession()[pri:0, instance:admin.sothelabs.testCases.CreateObject@35f983a6]" name="startSession" is-config="true" duration-ms="7801" started-at="2019-01-08T10:43:51Z" finished-at="2019-01-08T10:43:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSession -->
-        <test-method status="PASS" signature="createNewObject()[pri:0, instance:admin.sothelabs.testCases.CreateObject@35f983a6]" name="createNewObject" duration-ms="19356" started-at="2019-01-08T10:43:59Z" finished-at="2019-01-08T10:44:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createNewObject -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.CreateObject@35f983a6]" name="afterMethodInvocation" is-config="true" duration-ms="1" started-at="2019-01-08T10:44:19Z" finished-at="2019-01-08T10:44:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=createNewObject status=SUCCESS method=CreateObject.createNewObject()[pri:0, instance:admin.sothelabs.testCases.CreateObject@35f983a6] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void admin.sothelabs.testCases.CreateObject.createNewObject() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethodInvocation -->
-        <test-method status="PASS" signature="editAndSaveObject()[pri:0, instance:admin.sothelabs.testCases.CreateObject@35f983a6]" name="editAndSaveObject" duration-ms="33252" started-at="2019-01-08T10:44:19Z" finished-at="2019-01-08T10:44:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editAndSaveObject -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.CreateObject@35f983a6]" name="afterMethodInvocation" is-config="true" duration-ms="0" started-at="2019-01-08T10:44:52Z" finished-at="2019-01-08T10:44:52Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=editAndSaveObject status=SUCCESS method=CreateObject.editAndSaveObject()[pri:0, instance:admin.sothelabs.testCases.CreateObject@35f983a6] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void admin.sothelabs.testCases.CreateObject.editAndSaveObject() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethodInvocation -->
-        <test-method status="PASS" signature="quitSession()[pri:0, instance:admin.sothelabs.testCases.CreateObject@35f983a6]" name="quitSession" is-config="true" duration-ms="159" started-at="2019-01-08T10:49:23Z" finished-at="2019-01-08T10:49:23Z">
+        <test-method status="PASS" signature="quitSession()[pri:0, instance:admin.sothelabs.testCases.Consignment@506e6d5e]" name="quitSession" is-config="true" duration-ms="298" started-at="2019-01-08T11:37:37Z" finished-at="2019-01-08T11:37:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitSession -->
-      </class> <!-- admin.sothelabs.testCases.CreateObject -->
-      <class name="admin.sothelabs.testCases.Auction">
-        <test-method status="PASS" signature="createAndPublishAuction()[pri:0, instance:admin.sothelabs.testCases.Auction@3cda1055]" name="createAndPublishAuction" duration-ms="67650" started-at="2019-01-08T10:47:29Z" finished-at="2019-01-08T10:48:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createAndPublishAuction -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Auction@3cda1055]" name="afterMethodInvocation" is-config="true" duration-ms="0" started-at="2019-01-08T10:48:37Z" finished-at="2019-01-08T10:48:37Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=createAndPublishAuction status=SUCCESS method=Auction.createAndPublishAuction()[pri:0, instance:admin.sothelabs.testCases.Auction@3cda1055] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void admin.sothelabs.testCases.Auction.createAndPublishAuction() throws java.lang.InterruptedException,java.io.IOException,java.text.ParseException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethodInvocation -->
-        <test-method status="PASS" signature="addAndRemoveLots()[pri:0, instance:admin.sothelabs.testCases.Auction@3cda1055]" name="addAndRemoveLots" duration-ms="22744" started-at="2019-01-08T10:48:37Z" finished-at="2019-01-08T10:49:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addAndRemoveLots -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Auction@3cda1055]" name="afterMethodInvocation" is-config="true" duration-ms="0" started-at="2019-01-08T10:49:00Z" finished-at="2019-01-08T10:49:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=addAndRemoveLots status=SUCCESS method=Auction.addAndRemoveLots()[pri:0, instance:admin.sothelabs.testCases.Auction@3cda1055] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void admin.sothelabs.testCases.Auction.addAndRemoveLots() throws java.lang.InterruptedException,java.io.IOException,java.text.ParseException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethodInvocation -->
-        <test-method status="PASS" signature="addAndPublishLots()[pri:0, instance:admin.sothelabs.testCases.Auction@3cda1055]" name="addAndPublishLots" duration-ms="23374" started-at="2019-01-08T10:49:00Z" finished-at="2019-01-08T10:49:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addAndPublishLots -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Auction@3cda1055]" name="afterMethodInvocation" is-config="true" duration-ms="1" started-at="2019-01-08T10:49:23Z" finished-at="2019-01-08T10:49:23Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=addAndPublishLots status=SUCCESS method=Auction.addAndPublishLots()[pri:0, instance:admin.sothelabs.testCases.Auction@3cda1055] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void admin.sothelabs.testCases.Auction.addAndPublishLots() throws java.lang.InterruptedException,java.io.IOException,java.text.ParseException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethodInvocation -->
-      </class> <!-- admin.sothelabs.testCases.Auction -->
-    </test> <!-- AdminSmokeTest -->
-  </suite> <!-- AdminSmokeTestSuite -->
+      </class> <!-- admin.sothelabs.testCases.Consignment -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
