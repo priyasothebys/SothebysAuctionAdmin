@@ -40,9 +40,9 @@ public class Consignment extends SetupUtils {
 		System.out.println("Consignment is successfully created : " + consignment_title);
 		Thread.sleep(5000);
 		//System.out.println(Pages.objectPage().createButton.getAttribute("class"));
-		//Pages.objectPage().createButton.click();
+		Pages.objectPage().createButton.click();
 		//dr.findElement(By.xpath("//button[@class = 'css-pl457e css-1bljni8 css-z2namt']")).click();
-		actions.moveToElement(Pages.objectPage().createButton).click().build().perform();
+		//actions.moveToElement(Pages.objectPage().createButton).click().build().perform();
 		//dr.findElement(By.xpath("//div[@class = 'css-1gfzdq7']")).click();
 		Thread.sleep(5000);
 		//Pages.consignmentPage().createButton.click();
