@@ -38,7 +38,7 @@ public class Consignment extends SetupUtils {
 		Pages.consignmentPage().consignmentTitle.sendKeys(consignment_title);
 		Pages.consignmentPage().consignmentNotes.sendKeys(TestData.NOTES);	
 		Thread.sleep(2000);
-		actions.moveToElement(Pages.consignmentPage().createButton).click();
+		actions.moveToElement(dr.findElement(By.xpath("//div[@class = 'css-1gfzdq7']"))).click().build().perform();
 		//dr.findElement(By.xpath("//div[@class = 'css-1gfzdq7']")).click();
 		Thread.sleep(2000);
 		//Pages.consignmentPage().createButton.click();
