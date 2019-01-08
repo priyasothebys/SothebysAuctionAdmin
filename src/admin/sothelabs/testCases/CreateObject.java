@@ -127,7 +127,7 @@ public class CreateObject extends SetupUtils{
 		Thread.sleep(2000);
 		Pages.objectPage().exhibitionTextEdit.clear();
 		Pages.objectPage().exhibitionTextEdit.sendKeys(exhibition_edit+Keys.ENTER);
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		Pages.objectPage().literatureTextEdit.clear();
 		Pages.objectPage().literatureTextEdit.sendKeys(literature_edit+Keys.ENTER);
 		Thread.sleep(2000);

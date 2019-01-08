@@ -7,7 +7,6 @@
         <methods>
           <include name="createAndPublishAuction"/>
           <include name="afterMethodInvocation"/>
-          <include name="addAndRemoveLots"/>
           <include name="addAndPublishLots"/>
         </methods>
       </class> <!-- admin.sothelabs.testCases.Auction -->
@@ -20,7 +19,6 @@
         <methods>
           <include name="startSession"/>
           <include name="afterMethodInvocation"/>
-          <include name="editAndSaveObject"/>
           <include name="quitSession"/>
         </methods>
       </class> <!-- admin.sothelabs.testCases.CreateObject -->

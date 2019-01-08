@@ -37,6 +37,7 @@ public class Consignment extends SetupUtils {
 		actions.build().perform();
 		Pages.consignmentPage().consignmentTitle.sendKeys(consignment_title);
 		Pages.consignmentPage().consignmentNotes.sendKeys(TestData.NOTES);	
+		Thread.sleep(2000);
 		Pages.consignmentPage().createButton.click();
 		//------------Verify newly created consignment data values-------------
 		Assert.assertEquals(Pages.consignmentPage().consignment_header.getText(), TestData.CONSIGNOR_NAME);

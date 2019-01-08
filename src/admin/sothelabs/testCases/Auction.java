@@ -46,7 +46,7 @@ public class Auction extends SetupUtils{
 		//Pages.objectPage().uploadImage.sendKeys("//usr//bin//pexels-photo-990824.jpeg");
 		Thread.sleep(1000);
 		Pages.consignmentPage().createButton.click();
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 		Assert.assertEquals(Pages.auctionPage().detailsLink.getAttribute("class"), "isActive");
 		Assert.assertEquals(Pages.auctionPage().auctionTitleLabel.getText(), auction_title);
 		System.out.println("Auction Created Successfully : " + auction_title);
@@ -151,7 +151,7 @@ public class Auction extends SetupUtils{
 		action.moveToElement(select_lot).build().perform();
 		action.moveToElement(dr.findElement(By.xpath("//label[@class = 'css-1u3v222']"))).click().build().perform();
 		dr.findElement(By.xpath("//button[@data-test-id = 'dropdown-button']")).click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		dr.findElement(By.xpath("//a[@data-test-id = 'publish-lots']")).click();
 		//Pages.auctionPage().publishButton.click();
 		Pages.auctionPage().confirmPublishButton.click();
