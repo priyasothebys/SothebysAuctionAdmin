@@ -5,7 +5,6 @@
     <classes>
       <class name="admin.sothelabs.testCases.Consignment">
         <methods>
-          <include name="editConsignment"/>
           <include name="startSession"/>
           <include name="removeObjectsFromConsignment"/>
           <include name="afterMethodInvocation"/>
