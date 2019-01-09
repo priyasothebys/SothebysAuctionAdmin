@@ -39,7 +39,7 @@ public class Consignment extends SetupUtils {
 		Pages.consignmentPage().consignmentTitle.sendKeys(consignment_title);
 		Pages.consignmentPage().consignmentNotes.sendKeys(TestData.NOTES);	
 		//System.out.println("Consignment is successfully created : " + consignment_title);
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 
 		//((JavascriptExecutor)dr).executeScript("window.scrollTo(0,"+Pages.objectPage().createButton.getLocation().x+")");
 		//Pages.objectPage().createButton.click();
