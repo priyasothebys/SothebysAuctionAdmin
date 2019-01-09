@@ -38,7 +38,7 @@ public class Consignment extends SetupUtils {
 		actions.build().perform();
 		Pages.consignmentPage().consignmentTitle.sendKeys(consignment_title);
 		Pages.consignmentPage().consignmentNotes.sendKeys(TestData.NOTES);	
-		System.out.println("Consignment is successfully created : " + consignment_title);
+		//System.out.println("Consignment is successfully created : " + consignment_title);
 		Thread.sleep(2000);
 
 		//((JavascriptExecutor)dr).executeScript("window.scrollTo(0,"+Pages.objectPage().createButton.getLocation().x+")");
@@ -47,7 +47,7 @@ public class Consignment extends SetupUtils {
 		//Pages.objectPage().createButton.click();
 		//dr.findElement(By.xpath("//button[@class = 'css-pl457e css-1bljni8 css-z2namt']")).click();
 		//actions.moveToElement(Pages.objectPage().createButton).click().build().perform();
-		dr.findElement(By.xpath("//*[@id='app']/div/main/div/div[3]/div[2]/div[2]/div[2]/button")).click();
+		dr.findElement(By.cssSelector("#app > div > main > div > div.css-1kc78n1 > div:nth-child(2) > div.css-10qwcqf > div.css-1gfzdq7 > button")).click();
 		Thread.sleep(2000);
 		//Pages.consignmentPage().createButton.click();
 		//------------Verify newly created consignment data values-------------
