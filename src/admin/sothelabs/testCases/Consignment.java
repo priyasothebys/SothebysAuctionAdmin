@@ -47,7 +47,8 @@ public class Consignment extends SetupUtils {
 		//Pages.objectPage().createButton.click();
 		//dr.findElement(By.xpath("//button[@class = 'css-pl457e css-1bljni8 css-z2namt']")).click();
 		//actions.moveToElement(Pages.objectPage().createButton).click().build().perform();
-		actions.moveToElement(dr.findElement(By.cssSelector("#app > div > main > div > div.css-1kc78n1 > div:nth-child(2) > div.css-10qwcqf > div.css-1gfzdq7 > button"))).click().build().perform();
+		dr.findElement(By.cssSelector("#app > div > main > div > div.css-1kc78n1 > div:nth-child(2) > div.css-10qwcqf > div.css-1gfzdq7")).click();
+		dr.findElement(By.cssSelector("#app > div > main > div > div.css-1kc78n1 > div:nth-child(2) > div.css-10qwcqf > div.css-1gfzdq7 > button")).click();
 		Thread.sleep(2000);
 		//Pages.consignmentPage().createButton.click();
 		//------------Verify newly created consignment data values-------------
