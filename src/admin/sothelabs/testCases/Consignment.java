@@ -39,7 +39,10 @@ public class Consignment extends SetupUtils {
 		Pages.consignmentPage().consignmentTitle.sendKeys(consignment_title);
 		Pages.consignmentPage().consignmentNotes.sendKeys(TestData.NOTES);	
 		//System.out.println("Consignment is successfully created : " + consignment_title);
-		Thread.sleep(10000);
+		Thread.sleep(3000);
+		//<WebElement> element = dr.findElement(By.cssSelector("#app > div > main > div > div.css-1kc78n1 > div:nth-child(2) > div.css-10qwcqf > div.css-1gfzdq7 > button")));
+		JavascriptExecutor executor = (JavascriptExecutor)dr;
+		executor.executeScript("arguments[0].click();", dr.findElement(By.cssSelector("#app > div > main > div > div.css-1kc78n1 > div:nth-child(2) > div.css-10qwcqf > div.css-1gfzdq7 > button")));
 
 		//((JavascriptExecutor)dr).executeScript("window.scrollTo(0,"+Pages.objectPage().createButton.getLocation().x+")");
 		//Pages.objectPage().createButton.click();
@@ -47,7 +50,7 @@ public class Consignment extends SetupUtils {
 		//Pages.objectPage().createButton.click();
 		//dr.findElement(By.xpath("//button[@class = 'css-pl457e css-1bljni8 css-z2namt']")).click();
 		//actions.moveToElement(Pages.objectPage().createButton).click().build().perform();
-		dr.findElement(By.cssSelector("#app > div > main > div > div.css-1kc78n1 > div:nth-child(2) > div.css-10qwcqf > div.css-1gfzdq7")).click();
+		//dr.findElement(By.cssSelector("#app > div > main > div > div.css-1kc78n1 > div:nth-child(2) > div.css-10qwcqf > div.css-1gfzdq7")).click();
 		//dr.findElement(By.cssSelector("#app > div > main > div > div.css-1kc78n1 > div:nth-child(2) > div.css-10qwcqf > div.css-1gfzdq7 > button")).click();
 		Thread.sleep(2000);
 		//Pages.consignmentPage().createButton.click();
