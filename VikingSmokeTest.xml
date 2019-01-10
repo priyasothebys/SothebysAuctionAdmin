@@ -11,10 +11,10 @@
 			</class> 	 -->	
 		  <class name="admin.sothelabs.testCases.Consignment">
 				<methods>
-				<include name="createNewConsignment" />
-				 <include name="editConsignment" />
+				<exclude name="createNewConsignment" />
+				 <exclude name="editConsignment" />
 				 <include name="addObjectsToConsignment" />
-				 <include name="removeObjectsFromConsignment" />
+				 <exclude name="removeObjectsFromConsignment" />
 				 
 				</methods> 
 			</class> 		

@@ -107,7 +107,7 @@ public class Consignment extends SetupUtils {
 		Pages.consignmentPage().sothebysLogo.click();
 		waitforElement(dr, Pages.consignmentPage().navItemConsignment);
 		Pages.consignmentPage().navItemConsignment.click();
-		Pages.consignmentPage().searchField.sendKeys(consignment_title);
+		Pages.consignmentPage().searchField.sendKeys("QA Automation+SBlL3Gno");
 		Pages.consignmentPage().searchSubmitButton.click();
 		Thread.sleep(2000);
 		Pages.consignmentPage().searchResultItem.click();
@@ -118,6 +118,9 @@ public class Consignment extends SetupUtils {
 		dr.findElement(By.xpath("//input[@placeholder = 'Search']")).sendKeys("QA Test Object");
 		Thread.sleep(1000);
 		dr.findElement(By.xpath("//div[@class = 'css-17pn9uc']/h4[contains(text(),'Test Object')]")).click();
+		//WebElement element = driver.findElement(By.id("id_of_element"));
+		((JavascriptExecutor) dr).executeScript("arguments[0].scrollIntoView(true);", dr.findElement(By.xpath("//input[@placeholder = 'Object type']/ancestor::div[@class = 'sc-cSHVUG sc-dxgOiQ cFmSFh']")));
+		Thread.sleep(500);
 		dr.findElement(By.xpath("//input[@placeholder = 'Object type']/ancestor::div[@class = 'sc-cSHVUG sc-dxgOiQ cFmSFh']")).click();
 		Thread.sleep(2000);
 		dr.findElement(By.xpath("//span[contains(text(), 'Fine Art')]")).click();
