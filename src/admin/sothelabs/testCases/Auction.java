@@ -33,8 +33,6 @@ public class Auction extends SetupUtils{
 		Pages.auctionPage().titleTextEdit.sendKeys(auction_title);
 		Pages.auctionPage().locationListBox.sendKeys("New York"+Keys.ENTER);
 		//-----------Dates-------------
-		((JavascriptExecutor) dr).executeScript("arguments[0].scrollIntoView(true);", Pages.auctionPage().startDate);
-		Thread.sleep(500);
 		Pages.auctionPage().enterStartAndEndTime();
 		Pages.auctionPage().SaleNumTextEdit.sendKeys("AU"+generateRandomNumber());
 		Pages.auctionPage().departmentListBox.sendKeys("Contemporary Art ECTP"+Keys.ENTER);
