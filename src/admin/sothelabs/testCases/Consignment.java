@@ -107,7 +107,7 @@ public class Consignment extends SetupUtils {
 		Pages.consignmentPage().sothebysLogo.click();
 		waitforElement(dr, Pages.consignmentPage().navItemConsignment);
 		Pages.consignmentPage().navItemConsignment.click();
-		Pages.consignmentPage().searchField.sendKeys("QA Automation+SBlL3Gno");
+		Pages.consignmentPage().searchField.sendKeys(consignment_title);
 		Pages.consignmentPage().searchSubmitButton.click();
 		Thread.sleep(2000);
 		Pages.consignmentPage().searchResultItem.click();
@@ -145,7 +145,7 @@ public class Consignment extends SetupUtils {
 		Thread.sleep(1000);
 		Pages.consignmentPage().sothebysLogo.click();
 		Pages.consignmentPage().navItemConsignment.click();
-		Pages.consignmentPage().searchField.sendKeys(consignment_title);
+		Pages.consignmentPage().searchField.sendKeys("QA Automation+SBlL3Gno");
 		Pages.consignmentPage().searchSubmitButton.click();
 		Thread.sleep(2000);
 		Pages.consignmentPage().searchResultItem.click();

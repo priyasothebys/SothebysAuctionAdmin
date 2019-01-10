@@ -13,8 +13,8 @@
 				<methods>
 				<exclude name="createNewConsignment" />
 				 <exclude name="editConsignment" />
-				 <include name="addObjectsToConsignment" />
-				 <exclude name="removeObjectsFromConsignment" />
+				 <exclude name="addObjectsToConsignment" />
+				 <include name="removeObjectsFromConsignment" />
 				 
 				</methods> 
 			</class> 		
