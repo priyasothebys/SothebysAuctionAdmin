@@ -124,7 +124,7 @@ public class AuctionPageElements extends SetupUtils {
 		Thread.sleep(500);
 		endDate.sendKeys(end_date + Keys.ENTER);
 		Thread.sleep(2000);
-		dr.findElement(By.xpath("//span[contains(text(),'GMT')]")).click();
+		//dr.findElement(By.xpath("//span[contains(text(),'GMT')]")).click();
 //		((JavascriptExecutor) dr).executeScript("arguments[0].scrollIntoView(true);", Pages.auctionPage().endTimePicker);
 //		Thread.sleep(500);
 		endTimePicker.click();

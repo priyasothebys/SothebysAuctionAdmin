@@ -1,80 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="AdminSmokeTestSuite" duration-ms="17299" started-at="2019-01-10T18:41:52Z" finished-at="2019-01-10T18:42:09Z">
+  <suite name="AdminSmokeTestSuite" duration-ms="26308" started-at="2019-01-10T20:46:21Z" finished-at="2019-01-10T20:46:47Z">
     <groups>
     </groups>
-    <test name="AdminSmokeTest" duration-ms="17299" started-at="2019-01-10T18:41:52Z" finished-at="2019-01-10T18:42:09Z">
-      <class name="admin.sothelabs.testCases.Consignment">
-        <test-method status="PASS" signature="startSession()[pri:0, instance:admin.sothelabs.testCases.Consignment@4411d970]" name="startSession" is-config="true" duration-ms="7003" started-at="2019-01-10T13:41:45Z" finished-at="2019-01-10T13:41:52Z">
+    <test name="AdminSmokeTest" duration-ms="26308" started-at="2019-01-10T20:46:21Z" finished-at="2019-01-10T20:46:47Z">
+      <class name="admin.sothelabs.testCases.Auction">
+        <test-method status="PASS" signature="startSession()[pri:0, instance:admin.sothelabs.testCases.Auction@4411d970]" name="startSession" is-config="true" duration-ms="7102" started-at="2019-01-10T15:46:13Z" finished-at="2019-01-10T15:46:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSession -->
-        <test-method status="FAIL" signature="createNewConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@4411d970]" name="createNewConsignment" duration-ms="17288" started-at="2019-01-10T13:41:52Z" finished-at="2019-01-10T13:42:09Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [QA Automation] but found [New Consignment]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [QA Automation] but found [New Consignment]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:178)
-	at org.testng.Assert.assertEquals(Assert.java:188)
-	at admin.sothelabs.testCases.Consignment.createNewConsignment(Consignment.java:65)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
-	at org.testng.TestNG.run(TestNG.java:1033)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="createAndPublishAuction()[pri:0, instance:admin.sothelabs.testCases.Auction@4411d970]" name="createAndPublishAuction" duration-ms="26299" started-at="2019-01-10T15:46:21Z" finished-at="2019-01-10T15:46:47Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createNewConsignment -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Consignment@4411d970]" name="afterMethodInvocation" is-config="true" duration-ms="1" started-at="2019-01-10T13:42:09Z" finished-at="2019-01-10T13:42:09Z">
+        </test-method> <!-- createAndPublishAuction -->
+        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Auction@4411d970]" name="afterMethodInvocation" is-config="true" duration-ms="2" started-at="2019-01-10T15:46:47Z" finished-at="2019-01-10T15:46:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=createNewConsignment status=FAILURE method=Consignment.createNewConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@4411d970] output={null}]]]>
+                <![CDATA[[TestResult name=createAndPublishAuction status=SUCCESS method=Auction.createAndPublishAuction()[pri:0, instance:admin.sothelabs.testCases.Auction@4411d970] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void admin.sothelabs.testCases.Consignment.createNewConsignment() throws java.lang.InterruptedException,java.io.IOException]]>
+                <![CDATA[public void admin.sothelabs.testCases.Auction.createAndPublishAuction() throws java.lang.InterruptedException,java.io.IOException,java.text.ParseException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodInvocation -->
-        <test-method status="PASS" signature="quitSession()[pri:0, instance:admin.sothelabs.testCases.Consignment@4411d970]" name="quitSession" is-config="true" duration-ms="122" started-at="2019-01-10T13:42:09Z" finished-at="2019-01-10T13:42:09Z">
+        <test-method status="PASS" signature="quitSession()[pri:0, instance:admin.sothelabs.testCases.Auction@4411d970]" name="quitSession" is-config="true" duration-ms="123" started-at="2019-01-10T15:46:47Z" finished-at="2019-01-10T15:46:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitSession -->
-      </class> <!-- admin.sothelabs.testCases.Consignment -->
+      </class> <!-- admin.sothelabs.testCases.Auction -->
     </test> <!-- AdminSmokeTest -->
   </suite> <!-- AdminSmokeTestSuite -->
 </testng-results>

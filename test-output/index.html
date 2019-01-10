@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-AdminSmokeTestSuite">
-              <span class="suite-name border-failed">AdminSmokeTestSuite</span>
+              <span class="suite-name border-passed">AdminSmokeTestSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-AdminSmokeTestSuite" class="hide-methods failed suite-AdminSmokeTestSuite"> (hide)</a> <!-- hide-methods failed suite-AdminSmokeTestSuite -->
-                      <a href="#" panel-name="suite-AdminSmokeTestSuite" class="show-methods failed suite-AdminSmokeTestSuite"> (show)</a> <!-- show-methods failed suite-AdminSmokeTestSuite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-AdminSmokeTestSuite" class="hide-methods passed suite-AdminSmokeTestSuite"> (hide)</a> <!-- hide-methods passed suite-AdminSmokeTestSuite -->
+                      <a href="#" panel-name="suite-AdminSmokeTestSuite" class="show-methods passed suite-AdminSmokeTestSuite"> (show)</a> <!-- show-methods passed suite-AdminSmokeTestSuite -->
                     </span>
-                    <div class="method-list-content failed suite-AdminSmokeTestSuite">
+                    <div class="method-list-content passed suite-AdminSmokeTestSuite">
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-AdminSmokeTestSuite" title="admin.sothelabs.testCases.Consignment" hash-for-method="createNewConsignment">createNewConsignment</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AdminSmokeTestSuite" title="admin.sothelabs.testCases.Auction" hash-for-method="createAndPublishAuction">createAndPublishAuction</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-AdminSmokeTestSuite -->
+                    </div> <!-- method-list-content passed suite-AdminSmokeTestSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,25 +116,21 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-AdminSmokeTestSuite" class="panel AdminSmokeTestSuite">
-          <div class="suite-AdminSmokeTestSuite-class-failed">
+          <div class="suite-AdminSmokeTestSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">admin.sothelabs.testCases.Consignment</span>
+              <img src="passed.png"/>
+              <span class="class-name">admin.sothelabs.testCases.Auction</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createNewConsignment">
-                  </a> <!-- createNewConsignment -->
-                  <span class="method-name">createNewConsignment</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [QA Automation] but found [New Consignment]
-	at admin.sothelabs.testCases.Consignment.createNewConsignment(Consignment.java:65)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
+                  <a name="createAndPublishAuction">
+                  </a> <!-- createAndPublishAuction -->
+                  <span class="method-name">createAndPublishAuction</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-AdminSmokeTestSuite-class-failed -->
+          </div> <!-- suite-AdminSmokeTestSuite-class-passed -->
         </div> <!-- panel AdminSmokeTestSuite -->
         <div panel-name="test-xml-AdminSmokeTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -147,14 +143,13 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;AdminSmokeTestSuite&quot;&gt;
   &lt;test thread-count=&quot;1&quot; name=&quot;AdminSmokeTest&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;admin.sothelabs.testCases.Consignment&quot;&gt;
+      &lt;class name=&quot;admin.sothelabs.testCases.Auction&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;createNewConsignment&quot;/&gt;
-          &lt;exclude name=&quot;editConsignment&quot;/&gt;
-          &lt;exclude name=&quot;addObjectsToConsignment&quot;/&gt;
-          &lt;exclude name=&quot;removeObjectsFromConsignment&quot;/&gt;
+          &lt;include name=&quot;createAndPublishAuction&quot;/&gt;
+          &lt;exclude name=&quot;addAndRemoveLots&quot;/&gt;
+          &lt;exclude name=&quot;addAndPublishLots&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- admin.sothelabs.testCases.Consignment --&gt;
+      &lt;/class&gt; &lt;!-- admin.sothelabs.testCases.Auction --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- AdminSmokeTest --&gt;
 &lt;/suite&gt; &lt;!-- AdminSmokeTestSuite --&gt;
@@ -196,14 +191,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createNewConsignment')
-data.setCell(0, 2, 'admin.sothelabs.testCases.Consignment')
-data.setCell(0, 3, 17288);
+data.setCell(0, 1, 'createAndPublishAuction')
+data.setCell(0, 2, 'admin.sothelabs.testCases.Auction')
+data.setCell(0, 3, 26299);
 window.suiteTableData['AdminSmokeTestSuite']= { tableData: data, tableDiv: 'times-div-AdminSmokeTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 17 seconds</span>
+              <span class="suite-total-time">Total running time: 26 seconds</span>
               <div id="times-div-AdminSmokeTestSuite">
               </div> <!-- times-div-AdminSmokeTestSuite -->
             </div> <!-- times-div -->
@@ -222,13 +217,13 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">admin.sothelabs.testCases.Consignment</span>
+              <span class="ignored-class-name">admin.sothelabs.testCases.Auction</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">editConsignment</span>
+                <span class="ignored-method-name">addAndRemoveLots</span>
                 <br/>
-                <span class="ignored-method-name">removeObjectsFromConsignment</span>
+                <span class="ignored-method-name">addAndPublishLots</span>
                 <br/>
-                <span class="ignored-method-name">addObjectsToConsignment</span>
+                <span class="ignored-method-name">editAuction</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -240,24 +235,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">admin.sothelabs.testCases.Consignment</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">admin.sothelabs.testCases.Auction</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">startSession</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">createNewConsignment</span>
-                <span class="method-start">7011 ms</span>
+                <span class="method-name">createAndPublishAuction</span>
+                <span class="method-start">7108 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethodInvocation([TestResult name=createNewConsignment status=FAILURE method=Consignment.createNewConsignment()[pri:0...)</span>
-                <span class="method-start">24300 ms</span>
+                <span class="method-name">afterMethodInvocation([TestResult name=createAndPublishAuction status=SUCCESS method=Auction.createAndPublishAuction()[pri...)</span>
+                <span class="method-start">33407 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">quitSession</span>
-                <span class="method-start">24316 ms</span>
+                <span class="method-start">33427 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

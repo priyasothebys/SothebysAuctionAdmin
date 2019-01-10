@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -55,6 +56,7 @@ public class SetupUtils {
 		dr = new ChromeDriver();
 		dr.get(TestData.STAGE_URL);
 		System.out.println("Automation Suite running in Envt : " + TestData.STAGE_URL);
+		dr.manage().window().setSize(new Dimension(1920,1080));
 		dr.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		return dr;	
 	}
