@@ -55,7 +55,7 @@ public class SetupUtils {
 		dr = new ChromeDriver();
 		dr.get(TestData.STAGE_URL);
 		System.out.println("Automation Suite running in Envt : " + TestData.STAGE_URL);
-		dr.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		dr.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		return dr;	
 	}
 	
