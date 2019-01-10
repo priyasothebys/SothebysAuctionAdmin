@@ -12,9 +12,9 @@
 		  <class name="admin.sothelabs.testCases.Consignment">
 				<methods>
 				<include name="createNewConsignment" />
-				 <exclude name="editConsignment" />
-				 <exclude name="addObjectsToConsignment" />
-				 <exclude name="removeObjectsFromConsignment" />
+				 <include name="editConsignment" />
+				 <include name="addObjectsToConsignment" />
+				 <include name="removeObjectsFromConsignment" />
 				 
 				</methods> 
 			</class> 		

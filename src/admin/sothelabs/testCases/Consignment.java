@@ -32,35 +32,18 @@ public class Consignment extends SetupUtils {
 		Thread.sleep(2000);
 		Select title_dropdown = new Select(Pages.consignmentPage().ownerTypeDropdown);
 		title_dropdown.selectByVisibleText("Executor");
-		Thread.sleep(4000);
 		Pages.consignmentPage().consignmentTitle.sendKeys(consignment_title);
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		Actions actions = new Actions(dr);
 		actions.moveToElement(Pages.consignmentPage().sourceOfficeDropdown).click();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		actions.sendKeys(TestData.SOURCE_OFFICE);
 		actions.sendKeys(Keys.ENTER);
 		actions.build().perform();
 		Thread.sleep(2000);
 		Pages.consignmentPage().consignmentNotes.sendKeys(TestData.NOTES);	
-		Thread.sleep(3000);
-		System.out.println("Name---" + Pages.consignmentPage().consignorName.getAttribute("value"));
-		System.out.println("acc ID ---" + Pages.consignmentPage().accountID.getAttribute("value"));
-		System.out.println("title---" + Pages.consignmentPage().consignmentTitle.getAttribute("value"));
-		System.out.println("Notes---" + Pages.consignmentPage().consignmentNotes.getText());
-		Select select = new Select(Pages.consignmentPage().ownerTypeDropdown);
-		//WebElement option = select.getFirstSelectedOption();
-		String SelectedText = select.getFirstSelectedOption().getText();
-		System.out.println("owner---" + SelectedText);
-		
-		
-		
-		System.out.println("office---" + Pages.consignmentPage().sourceOfficeDropdown.getAttribute("placeholder value"));
-		
-		/*JavascriptExecutor executor = (JavascriptExecutor)dr;
-		executor.executeScript("arguments[0].click();", dr.findElement(By.cssSelector("#app > div > main > div > div.css-1kc78n1 > div:nth-child(2) > div.css-10qwcqf > div.css-1gfzdq7 > button")));*/
+		Thread.sleep(1000);	
 		Pages.objectPage().createButton.click();
-		Thread.sleep(2000);
 		//------------Verify newly created consignment data values-------------
 		Assert.assertEquals(Pages.consignmentPage().consignment_header.getText(), TestData.CONSIGNOR_NAME);
 		Assert.assertEquals(Pages.consignmentPage().consignorNameValue.getText(), TestData.CONSIGNOR_NAME);
