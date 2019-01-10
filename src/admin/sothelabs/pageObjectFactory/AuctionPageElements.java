@@ -110,8 +110,6 @@ public class AuctionPageElements extends SetupUtils {
 		String min = format.format(curDate);
 		format = new SimpleDateFormat("a");
 		String meredian = format.format(curDate);//AM or PM
-//		((JavascriptExecutor) dr).executeScript("arguments[0].scrollIntoView(true);", Pages.auctionPage().startDate);
-//		Thread.sleep(500);
 		startDate.sendKeys(start_date + Keys.ENTER);
 		Thread.sleep(500);
 		startTimePicker.click();
@@ -120,13 +118,10 @@ public class AuctionPageElements extends SetupUtils {
 		selectElementFromList(startMinutePicker, min);
 		selectElementFromList(startMeredianPicker, meredian);
 		Thread.sleep(1000);
-		((JavascriptExecutor) dr).executeScript("arguments[0].scrollIntoView(true);", Pages.auctionPage().endDate);
-		Thread.sleep(500);
+//		((JavascriptExecutor) dr).executeScript("arguments[0].scrollIntoView(true);", Pages.auctionPage().endDate);
+//		Thread.sleep(500);
 		endDate.sendKeys(end_date + Keys.ENTER);
 		Thread.sleep(2000);
-		//dr.findElement(By.xpath("//span[contains(text(),'GMT')]")).click();
-//		((JavascriptExecutor) dr).executeScript("arguments[0].scrollIntoView(true);", Pages.auctionPage().endTimePicker);
-//		Thread.sleep(500);
 		endTimePicker.click();
 		Thread.sleep(1000);
 		selectElementFromList(endHourPicker, hour);

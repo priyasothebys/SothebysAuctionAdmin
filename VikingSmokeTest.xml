@@ -20,9 +20,9 @@
 			</class> -->		
 			   <class name="admin.sothelabs.testCases.Auction">
 				<methods>
-				<include name="createAndPublishAuction" />
-				 <exclude name="addAndRemoveLots" />
-				 <exclude name= "addAndPublishLots" />
+				<exclude name="createAndPublishAuction" />
+				 <include name="addAndRemoveLots" />
+				 <include name= "addAndPublishLots" />
 				</methods> 
 			</class>
 		</classes>

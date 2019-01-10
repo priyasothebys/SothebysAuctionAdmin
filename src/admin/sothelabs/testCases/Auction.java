@@ -44,7 +44,6 @@ public class Auction extends SetupUtils{
 		Thread.sleep(2000);
 		Pages.auctionPage().bidIncrementItem.click();
 		Pages.objectPage().uploadImage.sendKeys(imagePathBasedOnEnvt());
-		//Pages.objectPage().uploadImage.sendKeys("//usr//bin//pexels-photo-990824.jpeg");
 		Thread.sleep(1000);
 		Pages.objectPage().createButton.click();
 		Thread.sleep(6000);
@@ -81,7 +80,7 @@ public class Auction extends SetupUtils{
 		Pages.consignmentPage().sothebysLogo.click();
 		waitforElement(dr, Pages.auctionPage().navItemAuction);
 		Pages.auctionPage().navItemAuction.click();
-		Pages.consignmentPage().searchField.sendKeys(auction_title);
+		Pages.consignmentPage().searchField.sendKeys("Auto Auction +TeB7GnTqjYoi");
 		Pages.consignmentPage().searchSubmitButton.click();
 		Thread.sleep(2000);
 		Pages.consignmentPage().searchResultItem.click();
@@ -122,7 +121,7 @@ public class Auction extends SetupUtils{
 		Pages.consignmentPage().sothebysLogo.click();
 		waitforElement(dr, Pages.auctionPage().navItemAuction);
 		Pages.auctionPage().navItemAuction.click();
-		Pages.consignmentPage().searchField.sendKeys(auction_title);
+		Pages.consignmentPage().searchField.sendKeys("Auto Auction +TeB7GnTqjYoi");
 		Pages.consignmentPage().searchSubmitButton.click();
 		Thread.sleep(2000);
 		Pages.consignmentPage().searchResultItem.click();
