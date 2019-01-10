@@ -6,6 +6,7 @@ import java.text.ParseException;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 
 import org.openqa.selenium.WebElement;
@@ -32,6 +33,8 @@ public class Auction extends SetupUtils{
 		Pages.auctionPage().titleTextEdit.sendKeys(auction_title);
 		Pages.auctionPage().locationListBox.sendKeys("New York"+Keys.ENTER);
 		//-----------Dates-------------
+		((JavascriptExecutor) dr).executeScript("arguments[0].scrollIntoView(true);", Pages.auctionPage().endTimePicker);
+		Thread.sleep(500);
 		Pages.auctionPage().enterStartAndEndTime();
 		Pages.auctionPage().SaleNumTextEdit.sendKeys("AU"+generateRandomNumber());
 		Pages.auctionPage().departmentListBox.sendKeys("Contemporary Art ECTP"+Keys.ENTER);
