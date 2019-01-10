@@ -29,14 +29,16 @@ public class Consignment extends SetupUtils {
 		Assert.assertTrue(Pages.consignmentPage().newConsignemntHeader.isDisplayed());
 		Pages.consignmentPage().consignorName.sendKeys(TestData.CONSIGNOR_NAME);
 		Pages.consignmentPage().accountID.sendKeys(TestData.ACCOUNTID);
+		Thread.sleep(2000);
 		Select title_dropdown = new Select(Pages.consignmentPage().ownerTypeDropdown);
 		title_dropdown.selectByVisibleText("Executor");
 		Actions actions = new Actions(dr);
 		actions.moveToElement(Pages.consignmentPage().sourceOfficeDropdown).click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		actions.sendKeys(TestData.SOURCE_OFFICE);
 		actions.sendKeys(Keys.ENTER);
 		actions.build().perform();
+		Thread.sleep(2000);
 		Pages.consignmentPage().consignmentTitle.sendKeys(consignment_title);
 		Pages.consignmentPage().consignmentNotes.sendKeys(TestData.NOTES);	
 		Thread.sleep(3000);
