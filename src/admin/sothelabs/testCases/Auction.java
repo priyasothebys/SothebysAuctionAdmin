@@ -80,7 +80,7 @@ public class Auction extends SetupUtils{
 		Pages.consignmentPage().sothebysLogo.click();
 		waitforElement(dr, Pages.auctionPage().navItemAuction);
 		Pages.auctionPage().navItemAuction.click();
-		Pages.consignmentPage().searchField.sendKeys("Auto Auction +TeB7GnTqjYoi");
+		Pages.consignmentPage().searchField.sendKeys(auction_title);
 		Pages.consignmentPage().searchSubmitButton.click();
 		Thread.sleep(2000);
 		Pages.consignmentPage().searchResultItem.click();
@@ -121,7 +121,7 @@ public class Auction extends SetupUtils{
 		Pages.consignmentPage().sothebysLogo.click();
 		waitforElement(dr, Pages.auctionPage().navItemAuction);
 		Pages.auctionPage().navItemAuction.click();
-		Pages.consignmentPage().searchField.sendKeys("Auto Auction +TeB7GnTqjYoi");
+		Pages.consignmentPage().searchField.sendKeys(auction_title);
 		Pages.consignmentPage().searchSubmitButton.click();
 		Thread.sleep(2000);
 		Pages.consignmentPage().searchResultItem.click();
