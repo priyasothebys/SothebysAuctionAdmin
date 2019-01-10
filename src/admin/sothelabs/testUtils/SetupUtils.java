@@ -47,7 +47,7 @@ public class SetupUtils {
 	public WebDriver initializeDriver() throws InterruptedException {
 		if (platform.equals("Mac OS X")) {
 		System.setProperty("webdriver.chrome.driver",
-					"//Users//priya.ganesan//Documents//Browsers//chromedriver 2.38");
+					"//Users//priya.ganesan//Documents//Browsers//chromedriver 2");
 		}else{
 			TestData.ENVT = System.getProperty("Environment");
 			System.setProperty("webdriver.chrome.driver", "//usr//bin//chromedriver");

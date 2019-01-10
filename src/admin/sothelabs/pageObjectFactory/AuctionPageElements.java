@@ -62,8 +62,10 @@ public class AuctionPageElements extends SetupUtils {
 	@FindBy(xpath = "//input[@id = 'end']")
 	public WebElement endDate;
 	
-	@FindBy(xpath = "//input[@id= 'end']/ancestor::div[@class = 'sc-hEsumM fMhkjF']/following-sibling::span/div/span/input")
+	@FindBy(xpath = "//span[@class = 'rc-time-picker ']")
 	public WebElement endTimePicker;
+//	@FindBy(xpath = "//input[@id= 'end']/ancestor::div[@class = 'sc-hEsumM fMhkjF']/following-sibling::span/div/span/input")
+//	public WebElement endTimePicker;
 	
 	@FindBy(xpath = "//html/body/div[3]/div/div/div/div[2]/div[1]/ul/li")
 	public List<WebElement> endHourPicker;

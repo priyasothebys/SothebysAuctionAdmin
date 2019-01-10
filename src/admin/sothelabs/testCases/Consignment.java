@@ -25,7 +25,8 @@ public class Consignment extends SetupUtils {
 		Pages.consignmentPage().newButton.click();
 		waitforElement(dr, Pages.consignmentPage().sidebarMenuConsignment);
 		Pages.consignmentPage().sidebarMenuConsignment.click();
-		Assert.assertTrue(dr.findElement(By.xpath("//h1[contains(text(), 'New Consignment')]")).isDisplayed());
+		waitforElement(dr, Pages.consignmentPage().newConsignemntHeader);
+		Assert.assertTrue(Pages.consignmentPage().newConsignemntHeader.isDisplayed());
 		Pages.consignmentPage().consignorName.sendKeys(TestData.CONSIGNOR_NAME);
 		Pages.consignmentPage().accountID.sendKeys(TestData.ACCOUNTID);
 		Select title_dropdown = new Select(Pages.consignmentPage().ownerTypeDropdown);
@@ -38,22 +39,16 @@ public class Consignment extends SetupUtils {
 		actions.build().perform();
 		Pages.consignmentPage().consignmentTitle.sendKeys(consignment_title);
 		Pages.consignmentPage().consignmentNotes.sendKeys(TestData.NOTES);	
-		//System.out.println("Consignment is successfully created : " + consignment_title);
 		Thread.sleep(3000);
-		//<WebElement> element = dr.findElement(By.cssSelector("#app > div > main > div > div.css-1kc78n1 > div:nth-child(2) > div.css-10qwcqf > div.css-1gfzdq7 > button")));
-		JavascriptExecutor executor = (JavascriptExecutor)dr;
-		executor.executeScript("arguments[0].click();", dr.findElement(By.cssSelector("#app > div > main > div > div.css-1kc78n1 > div:nth-child(2) > div.css-10qwcqf > div.css-1gfzdq7 > button")));
-
-		//((JavascriptExecutor)dr).executeScript("window.scrollTo(0,"+Pages.objectPage().createButton.getLocation().x+")");
-		//Pages.objectPage().createButton.click();
-		//System.out.println(Pages.objectPage().createButton.getAttribute("class"));
-		//Pages.objectPage().createButton.click();
-		//dr.findElement(By.xpath("//button[@class = 'css-pl457e css-1bljni8 css-z2namt']")).click();
-		//actions.moveToElement(Pages.objectPage().createButton).click().build().perform();
-		//dr.findElement(By.cssSelector("#app > div > main > div > div.css-1kc78n1 > div:nth-child(2) > div.css-10qwcqf > div.css-1gfzdq7")).click();
-		//dr.findElement(By.cssSelector("#app > div > main > div > div.css-1kc78n1 > div:nth-child(2) > div.css-10qwcqf > div.css-1gfzdq7 > button")).click();
+		System.out.println("Name---" + Pages.consignmentPage().consignorName.getAttribute("value"));
+		System.out.println("acc ID ---" + Pages.consignmentPage().accountID.getAttribute("value"));
+		System.out.println("title---" + Pages.consignmentPage().consignmentTitle.getAttribute("value"));
+		System.out.println("Notes---" + Pages.consignmentPage().consignmentNotes.getText());
+		
+		/*JavascriptExecutor executor = (JavascriptExecutor)dr;
+		executor.executeScript("arguments[0].click();", dr.findElement(By.cssSelector("#app > div > main > div > div.css-1kc78n1 > div:nth-child(2) > div.css-10qwcqf > div.css-1gfzdq7 > button")));*/
+		Pages.objectPage().createButton.click();
 		Thread.sleep(2000);
-		//Pages.consignmentPage().createButton.click();
 		//------------Verify newly created consignment data values-------------
 		Assert.assertEquals(Pages.consignmentPage().consignment_header.getText(), TestData.CONSIGNOR_NAME);
 		Assert.assertEquals(Pages.consignmentPage().consignorNameValue.getText(), TestData.CONSIGNOR_NAME);
@@ -141,11 +136,12 @@ public class Consignment extends SetupUtils {
 		dr.findElement(By.xpath("//input[@label = 'Estimatelow']")).sendKeys("200");
 		dr.findElement(By.xpath("//input[@label = 'Estimatehigh']")).sendKeys("1000");
 		dr.findElement(By.xpath("//input[@label = 'reserve']")).sendKeys("200");
-		Pages.consignmentPage().createButton.click();
+		Pages.objectPage().createButton.click();
 		Thread.sleep(1000);
 		Assert.assertTrue(dr.findElement(By.xpath("//div[contains(text(), 'QA Automation')]/ancestor::a[contains(@href, '/properties')]")).isDisplayed());
 		//Assert.assertEquals(dr.findElement(By.xpath("//div[contains(text(), 'Total Properties')]/following-sibling::div/h1")).getText(), "1");	
 	}
+	
 	@Test(priority = 4, enabled = true)
 	public void removeObjectsFromConsignment() throws InterruptedException, IOException {
 		Thread.sleep(1000);

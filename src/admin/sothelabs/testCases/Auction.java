@@ -45,7 +45,7 @@ public class Auction extends SetupUtils{
 		Pages.objectPage().uploadImage.sendKeys(imagePathBasedOnEnvt());
 		//Pages.objectPage().uploadImage.sendKeys("//usr//bin//pexels-photo-990824.jpeg");
 		Thread.sleep(1000);
-		Pages.consignmentPage().createButton.click();
+		Pages.objectPage().createButton.click();
 		Thread.sleep(6000);
 		Assert.assertEquals(Pages.auctionPage().detailsLink.getAttribute("class"), "isActive");
 		Assert.assertEquals(Pages.auctionPage().auctionTitleLabel.getText(), auction_title);

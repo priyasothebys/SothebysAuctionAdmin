@@ -27,8 +27,8 @@ public class ConsignmentPageElements extends SetupUtils {
 	@FindBy(xpath = "//textarea[@label = 'consignmentNotes']")
 	public WebElement consignmentNotes;
 	
-	@FindBy(xpath = "//button[contains(text(), 'Create')]")
-	public WebElement createButton;
+//	@FindBy(xpath = "//button[contains(text(), 'Create')]")
+//	public WebElement createButton;
 	
 	@FindBy(xpath = "//a[@href = '/consignments/new']")
 	public WebElement sidebarMenuConsignment;
@@ -92,6 +92,9 @@ public class ConsignmentPageElements extends SetupUtils {
 
 	@FindBy(xpath = "//button[contains(text(), 'Save')]")
 	public WebElement saveButton;
+	
+	@FindBy(xpath = "//h1[contains(text(), 'New Consignment')]")
+	public WebElement newConsignemntHeader;
 	
 	public void loginIntoApplication(){
 		emailAddress.sendKeys(TestData.USERNAME);
