@@ -5,6 +5,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -109,8 +110,8 @@ public class AuctionPageElements extends SetupUtils {
 		String min = format.format(curDate);
 		format = new SimpleDateFormat("a");
 		String meredian = format.format(curDate);//AM or PM
-		((JavascriptExecutor) dr).executeScript("arguments[0].scrollIntoView(true);", Pages.auctionPage().startDate);
-		Thread.sleep(500);
+//		((JavascriptExecutor) dr).executeScript("arguments[0].scrollIntoView(true);", Pages.auctionPage().startDate);
+//		Thread.sleep(500);
 		startDate.sendKeys(start_date + Keys.ENTER);
 		Thread.sleep(500);
 		startTimePicker.click();
@@ -123,8 +124,9 @@ public class AuctionPageElements extends SetupUtils {
 		Thread.sleep(500);
 		endDate.sendKeys(end_date + Keys.ENTER);
 		Thread.sleep(2000);
-		((JavascriptExecutor) dr).executeScript("arguments[0].scrollIntoView(true);", Pages.auctionPage().endTimePicker);
-		Thread.sleep(500);
+		dr.findElement(By.xpath("//span[contains(text(),'GMT')]")).click();
+//		((JavascriptExecutor) dr).executeScript("arguments[0].scrollIntoView(true);", Pages.auctionPage().endTimePicker);
+//		Thread.sleep(500);
 		endTimePicker.click();
 		Thread.sleep(1000);
 		selectElementFromList(endHourPicker, hour);
