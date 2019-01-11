@@ -81,7 +81,7 @@ public class Consignment extends SetupUtils {
 		Actions actions = new Actions(dr);		
 		actions.moveToElement(dr.findElement(By.xpath("//div[@class = 'sc-kGXeez gddReB']"))).click();
 		Thread.sleep(2000);
-		actions.sendKeys("Abu");
+		actions.sendKeys("Abu Dhabi");
 		actions.sendKeys(Keys.ENTER);
 		actions.build().perform();
 		Pages.consignmentPage().consignmentTitle.clear();
@@ -94,8 +94,7 @@ public class Consignment extends SetupUtils {
 		Assert.assertEquals(Pages.consignmentPage().consignorNameValue.getText(), consignor_name_edit);
 		Assert.assertEquals(Pages.consignmentPage().accountIDValue.getText(), account_id_edit);
 		Assert.assertEquals(Pages.consignmentPage().ownerTypeValue.getText(), owner_type_edit);
-		System.out.println("Source Office:  " +Pages.consignmentPage().sourceOfficeValue.getText());
-		Assert.assertTrue(Pages.consignmentPage().sourceOfficeValue.getText().contains(TestData.SOURCE_OFFICE));
+		Assert.assertTrue(Pages.consignmentPage().sourceOfficeValue.getText().contains("Abu Dhabi"));
 		Assert.assertEquals(Pages.consignmentPage().consignmentTitleValue.getText(), consignment_title_edit);
 		Assert.assertEquals(Pages.consignmentPage().consignmentNotesValue.getText(), consignment_notes_edit);
 		System.out.println("Successfully saved the edited consignemnt fields");
