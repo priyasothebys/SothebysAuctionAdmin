@@ -94,6 +94,7 @@ public class Consignment extends SetupUtils {
 		Assert.assertEquals(Pages.consignmentPage().consignorNameValue.getText(), consignor_name_edit);
 		Assert.assertEquals(Pages.consignmentPage().accountIDValue.getText(), account_id_edit);
 		Assert.assertEquals(Pages.consignmentPage().ownerTypeValue.getText(), owner_type_edit);
+		System.out.println("Source Office:  " +Pages.consignmentPage().sourceOfficeValue.getText());
 		Assert.assertTrue(Pages.consignmentPage().sourceOfficeValue.getText().contains(TestData.SOURCE_OFFICE));
 		Assert.assertEquals(Pages.consignmentPage().consignmentTitleValue.getText(), consignment_title_edit);
 		Assert.assertEquals(Pages.consignmentPage().consignmentNotesValue.getText(), consignment_notes_edit);
@@ -136,8 +137,8 @@ public class Consignment extends SetupUtils {
 		dr.findElement(By.xpath("//input[@label = 'reserve']")).sendKeys("200");
 		Pages.objectPage().createButton.click();
 		Thread.sleep(1000);
-		Assert.assertTrue(dr.findElement(By.xpath("//div[contains(text(), 'QA Automation')]/ancestor::a[contains(@href, '/properties')]")).isDisplayed());
-		//Assert.assertEquals(dr.findElement(By.xpath("//div[contains(text(), 'Total Properties')]/following-sibling::div/h1")).getText(), "1");	
+		Assert.assertTrue(dr.findElement(By.xpath("//h1[contains(text(), 'QA Test Object')]")).isDisplayed());
+		System.out.println("Objects were added to Consignment");
 	}
 	
 	@Test(priority = 4, enabled = true)
@@ -145,17 +146,21 @@ public class Consignment extends SetupUtils {
 		Thread.sleep(1000);
 		Pages.consignmentPage().sothebysLogo.click();
 		Pages.consignmentPage().navItemConsignment.click();
-		Pages.consignmentPage().searchField.sendKeys("consignment_title");
+		Pages.consignmentPage().searchField.sendKeys(consignment_title);
 		Pages.consignmentPage().searchSubmitButton.click();
 		Thread.sleep(2000);
 		Pages.consignmentPage().searchResultItem.click();
 		dr.findElement(By.xpath("//a[contains(text(), 'Properties')]")).click();
-		Assert.assertEquals(dr.findElement(By.xpath("//div[contains(text(), 'Total Properties')]/following-sibling::div/h1")).getText(), "1");
-		dr.findElement(By.xpath("//tbody/tr/th")).click();
-		dr.findElement(By.xpath("//a[contains(text(),'Delete')]")).click();
-		//Thread.sleep(2000);
-		waitforElement(dr, dr.findElement(By.xpath("//h3[contains(text(), 'No Properties have been added to this Consignment')]")));
-		Assert.assertTrue(dr.findElement(By.xpath("//h3[contains(text(), 'No Properties have been added to this Consignment')]")).isDisplayed());
+		if(dr.findElement(By.xpath("//div[contains(text(), 'Total Properties')]/following-sibling::div/h1")).getText().contentEquals("1")){
+			dr.findElement(By.xpath("//tbody/tr/th")).click();
+			dr.findElement(By.xpath("//a[contains(text(),'Delete')]")).click();
+			//Thread.sleep(2000);
+			waitforElement(dr, dr.findElement(By.xpath("//h3[contains(text(), 'No Properties have been added to this Consignment')]")));
+			Assert.assertTrue(dr.findElement(By.xpath("//h3[contains(text(), 'No Properties have been added to this Consignment')]")).isDisplayed());
+			System.out.println("Objects were removed from consignment");
+		}else{
+			System.out.println("Objects were not present to remove from consignment");
+		}
 	}	
 	
 }
