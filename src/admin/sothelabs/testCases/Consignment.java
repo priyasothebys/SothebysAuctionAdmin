@@ -16,8 +16,8 @@ import admin.sothelabs.testUtils.SetupUtils;
 import admin.sothelabs.testUtils.TestData;
 
 public class Consignment extends SetupUtils {
-	
-	protected String consignment_title = "QA Automation+"+RandomStringUtils.randomAlphanumeric(8);
+
+	protected String consignment_title = "QA Automation+" + RandomStringUtils.randomAlphanumeric(8);
 
 	@Test(priority = 1, enabled = true)
 	public void createNewConsignment() throws InterruptedException, IOException {
@@ -41,10 +41,10 @@ public class Consignment extends SetupUtils {
 		actions.sendKeys(Keys.ENTER);
 		actions.build().perform();
 		Thread.sleep(2000);
-		Pages.consignmentPage().consignmentNotes.sendKeys(TestData.NOTES);	
-		Thread.sleep(1000);	
+		Pages.consignmentPage().consignmentNotes.sendKeys(TestData.NOTES);
+		Thread.sleep(1000);
 		Pages.objectPage().createButton.click();
-		//------------Verify newly created consignment data values-------------
+		// ------------Verify newly created consignment data values-------------
 		Assert.assertEquals(Pages.consignmentPage().consignment_header.getText(), TestData.CONSIGNOR_NAME);
 		Assert.assertEquals(Pages.consignmentPage().consignorNameValue.getText(), TestData.CONSIGNOR_NAME);
 		Assert.assertEquals(Pages.consignmentPage().accountIDValue.getText(), TestData.ACCOUNTID);
@@ -54,22 +54,15 @@ public class Consignment extends SetupUtils {
 		Assert.assertEquals(Pages.consignmentPage().consignmentNotesValue.getText(), TestData.NOTES);
 		System.out.println("Consignment is successfully created : " + consignment_title);
 	}
-	
+
 	@Test(priority = 2, enabled = true)
 	public void editConsignment() throws InterruptedException, IOException {
 		Thread.sleep(2000);
-		/*dr.navigate().refresh();
-		Pages.consignmentPage().sothebysLogo.click();
-		waitforElement(dr, Pages.consignmentPage().navItemConsignment);
-		Pages.consignmentPage().navItemConsignment.click();
-		Pages.consignmentPage().searchField.sendKeys(consignment_title);
-		Pages.consignmentPage().searchSubmitButton.click();
-		Pages.consignmentPage().searchResultItem.click();*/
-		String consignor_name_edit = Pages.consignmentPage().consignorNameValue.getText()+" edit";
-		String account_id_edit = Pages.consignmentPage().accountIDValue.getText()+" edit";
+		String consignor_name_edit = Pages.consignmentPage().consignorNameValue.getText() + " edit";
+		String account_id_edit = Pages.consignmentPage().accountIDValue.getText() + " edit";
 		String owner_type_edit = "Owner";
-		String consignment_title_edit = Pages.consignmentPage().consignmentTitleValue.getText()+" edit";
-		String consignment_notes_edit = Pages.consignmentPage().consignmentNotesValue.getText()+" edit";
+		String consignment_title_edit = Pages.consignmentPage().consignmentTitleValue.getText() + " edit";
+		String consignment_notes_edit = Pages.consignmentPage().consignmentNotesValue.getText() + " edit";
 		Assert.assertEquals(Pages.consignmentPage().consignment_header.getText(), TestData.CONSIGNOR_NAME);
 		Pages.consignmentPage().editButton.click();
 		Pages.consignmentPage().consignorName.clear();
@@ -78,14 +71,13 @@ public class Consignment extends SetupUtils {
 		Pages.consignmentPage().accountID.sendKeys(account_id_edit);
 		Select title_dropdown = new Select(Pages.consignmentPage().ownerTypeDropdown);
 		title_dropdown.selectByVisibleText(owner_type_edit);
-		Actions actions = new Actions(dr);		
+		Pages.consignmentPage().consignmentTitle.clear();
+		Pages.consignmentPage().consignmentTitle.sendKeys(consignment_title_edit);
+		Actions actions = new Actions(dr);
 		actions.moveToElement(dr.findElement(By.xpath("//div[@class = 'sc-kGXeez gddReB']"))).click();
 		Thread.sleep(2000);
 		actions.sendKeys("Abu Dhabi");
-		actions.sendKeys(Keys.ENTER);
-		actions.build().perform();
-		Pages.consignmentPage().consignmentTitle.clear();
-		Pages.consignmentPage().consignmentTitle.sendKeys(consignment_title_edit);
+		actions.sendKeys(Keys.ENTER).build().perform();;
 		Pages.consignmentPage().consignmentNotes.clear();
 		Pages.consignmentPage().consignmentNotes.sendKeys(consignment_notes_edit);
 		Pages.consignmentPage().saveButton.click();
@@ -99,8 +91,7 @@ public class Consignment extends SetupUtils {
 		Assert.assertEquals(Pages.consignmentPage().consignmentNotesValue.getText(), consignment_notes_edit);
 		System.out.println("Successfully saved the edited consignemnt fields");
 	}
-	
-	
+
 	@Test(priority = 3, enabled = true)
 	public void addObjectsToConsignment() throws InterruptedException, IOException {
 		Thread.sleep(1000);
@@ -111,26 +102,32 @@ public class Consignment extends SetupUtils {
 		Pages.consignmentPage().searchSubmitButton.click();
 		Thread.sleep(2000);
 		Pages.consignmentPage().searchResultItem.click();
-		Assert.assertEquals(Pages.consignmentPage().consignment_header.getText(), TestData.CONSIGNOR_NAME+" edit");
+		Assert.assertEquals(Pages.consignmentPage().consignment_header.getText(), TestData.CONSIGNOR_NAME + " edit");
 		dr.findElement(By.xpath("//a[contains(text(), 'Properties')]")).click();
 		dr.findElement(By.xpath("//a[contains(text(), 'New Property')]")).click();
 		Assert.assertEquals(dr.findElement(By.xpath("//h1[@class = 'css-1cbuwhv']")).getText(), "Add Property");
 		dr.findElement(By.xpath("//input[@placeholder = 'Search']")).sendKeys("QA Test Object");
 		Thread.sleep(1000);
 		dr.findElement(By.xpath("//div[@class = 'css-17pn9uc']/h4[contains(text(),'Test Object')]")).click();
-		//WebElement element = driver.findElement(By.id("id_of_element"));
-		((JavascriptExecutor) dr).executeScript("arguments[0].scrollIntoView(true);", dr.findElement(By.xpath("//input[@placeholder = 'Object type']/ancestor::div[@class = 'sc-cSHVUG sc-dxgOiQ cFmSFh']")));
+		// WebElement element = driver.findElement(By.id("id_of_element"));
+		((JavascriptExecutor) dr).executeScript("arguments[0].scrollIntoView(true);", dr.findElement(By
+				.xpath("//input[@placeholder = 'Object type']/ancestor::div[@class = 'sc-cSHVUG sc-dxgOiQ cFmSFh']")));
 		Thread.sleep(500);
-		dr.findElement(By.xpath("//input[@placeholder = 'Object type']/ancestor::div[@class = 'sc-cSHVUG sc-dxgOiQ cFmSFh']")).click();
+		dr.findElement(
+				By.xpath("//input[@placeholder = 'Object type']/ancestor::div[@class = 'sc-cSHVUG sc-dxgOiQ cFmSFh']"))
+				.click();
 		Thread.sleep(2000);
 		dr.findElement(By.xpath("//span[contains(text(), 'Fine Art')]")).click();
-		Pages.auctionPage().departmentListBox.sendKeys("Contemporary Art"+Keys.ENTER);
+		Pages.auctionPage().departmentListBox.sendKeys("Contemporary Art" + Keys.ENTER);
 		Thread.sleep(1000);
-		dr.findElement(By.xpath("//input[@placeholder = 'Sale location']")).sendKeys("New York"+Keys.ENTER);
+		dr.findElement(By.xpath("//input[@placeholder = 'Sale location']")).sendKeys("New York" + Keys.ENTER);
 		Thread.sleep(2000);
 		Select currency_dropdown = new Select(dr.findElement(By.xpath("//select[@name = 'currency']")));
 		currency_dropdown.selectByVisibleText("USD");
-		Assert.assertTrue(dr.findElement(By.xpath("//label[@for = 'estimate']/parent::div/following-sibling::div/div/div[contains(text(),'USD')]")).isDisplayed());
+		Assert.assertTrue(dr
+				.findElement(By
+						.xpath("//label[@for = 'estimate']/parent::div/following-sibling::div/div/div[contains(text(),'USD')]"))
+				.isDisplayed());
 		dr.findElement(By.xpath("//input[@label = 'Estimatelow']")).sendKeys("200");
 		dr.findElement(By.xpath("//input[@label = 'Estimatehigh']")).sendKeys("1000");
 		dr.findElement(By.xpath("//input[@label = 'reserve']")).sendKeys("200");
@@ -139,7 +136,7 @@ public class Consignment extends SetupUtils {
 		Assert.assertTrue(dr.findElement(By.xpath("//h1[contains(text(), 'QA Test Object')]")).isDisplayed());
 		System.out.println("Objects were added to Consignment");
 	}
-	
+
 	@Test(priority = 4, enabled = true)
 	public void removeObjectsFromConsignment() throws InterruptedException, IOException {
 		Thread.sleep(1000);
@@ -150,16 +147,21 @@ public class Consignment extends SetupUtils {
 		Thread.sleep(2000);
 		Pages.consignmentPage().searchResultItem.click();
 		dr.findElement(By.xpath("//a[contains(text(), 'Properties')]")).click();
-		if(dr.findElement(By.xpath("//div[contains(text(), 'Total Properties')]/following-sibling::div/h1")).getText().contentEquals("1")){
+		if (dr.findElement(By.xpath("//div[contains(text(), 'Total Properties')]/following-sibling::div/h1")).getText()
+				.contentEquals("1")) {
 			dr.findElement(By.xpath("//tbody/tr/th")).click();
 			dr.findElement(By.xpath("//a[contains(text(),'Delete')]")).click();
-			//Thread.sleep(2000);
-			waitforElement(dr, dr.findElement(By.xpath("//h3[contains(text(), 'No Properties have been added to this Consignment')]")));
-			Assert.assertTrue(dr.findElement(By.xpath("//h3[contains(text(), 'No Properties have been added to this Consignment')]")).isDisplayed());
+			// Thread.sleep(2000);
+			waitforElement(dr, dr.findElement(
+					By.xpath("//h3[contains(text(), 'No Properties have been added to this Consignment')]")));
+			Assert.assertTrue(dr
+					.findElement(
+							By.xpath("//h3[contains(text(), 'No Properties have been added to this Consignment')]"))
+					.isDisplayed());
 			System.out.println("Objects were removed from consignment");
-		}else{
+		} else {
 			System.out.println("Objects were not present to remove from consignment");
 		}
-	}	
-	
+	}
+
 }
