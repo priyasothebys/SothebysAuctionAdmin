@@ -105,7 +105,8 @@ public class Consignment extends SetupUtils {
 		Assert.assertEquals(Pages.consignmentPage().consignment_header.getText(), TestData.CONSIGNOR_NAME + " edit");
 		dr.findElement(By.xpath("//a[contains(text(), 'Properties')]")).click();
 		dr.findElement(By.xpath("//a[contains(text(), 'New Property')]")).click();
-		Assert.assertEquals(dr.findElement(By.xpath("//h1[@class = 'css-1cbuwhv']")).getText(), "Add Property");
+		waitforElement(dr, dr.findElement(By.xpath("//h1[contains(text(), 'Add Property')]")));
+		Assert.assertEquals(dr.findElement(By.xpath("//h1[contains(text(), 'Add Property')]")).getText(), "Add Property");
 		dr.findElement(By.xpath("//input[@placeholder = 'Search']")).sendKeys("QA Test Object");
 		Thread.sleep(1000);
 		dr.findElement(By.xpath("//div[@class = 'css-17pn9uc']/h4[contains(text(),'Test Object')]")).click();
