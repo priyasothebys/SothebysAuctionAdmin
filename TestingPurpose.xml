@@ -3,14 +3,14 @@
 <suite name="AdminSmokeTestSuite">
 	<test thread-count="1" name="AdminTest">
 		<classes>
-		 <!--  <class name="admin.sothelabs.testCases.Consignment">
+		   <class name="admin.sothelabs.testCases.Consignment">
 				<methods>
-				<include name="createNewConsignment" />
-				 <include name="editConsignment" />
+				<exclude name="createNewConsignment" />
+				 <exclude name="editConsignment" />
 				 <include name = "addObjectsToConsignment"></include>
-				 <include name="removeObjectsFromConsignment"></include>
+				 <exclude name="removeObjectsFromConsignment"></exclude>
 				</methods> 
-			</class>  -->
+			</class>  
 			<!--  <class name="admin.sothelabs.testCases.CreateObject">
 				<methods>
 				<include name="createNewObject" />
@@ -18,13 +18,13 @@
 				</methods> 
 			</class> -->
 			
-			<class name="admin.sothelabs.testCases.Auction">
+			<!--  <class name="admin.sothelabs.testCases.Auction">
 				<methods>
 				<include name="createAndPublishAuction" />
 				<include name="addAndRemoveLots" />
 				<include name="addAndPublishLots" />
 				</methods> 
-			</class> 
+			</class> -->
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

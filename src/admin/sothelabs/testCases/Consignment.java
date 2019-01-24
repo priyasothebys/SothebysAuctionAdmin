@@ -94,7 +94,7 @@ public class Consignment extends SetupUtils {
 
 	@Test(priority = 3, enabled = true)
 	public void addObjectsToConsignment() throws InterruptedException, IOException {
-		Thread.sleep(1000);
+		waitforElement(dr, Pages.consignmentPage().sothebysLogo);
 		Pages.consignmentPage().sothebysLogo.click();
 		waitforElement(dr, Pages.consignmentPage().navItemConsignment);
 		Pages.consignmentPage().navItemConsignment.click();
@@ -105,12 +105,11 @@ public class Consignment extends SetupUtils {
 		Assert.assertEquals(Pages.consignmentPage().consignment_header.getText(), TestData.CONSIGNOR_NAME + " edit");
 		dr.findElement(By.xpath("//a[contains(text(), 'Properties')]")).click();
 		dr.findElement(By.xpath("//a[contains(text(), 'New Property')]")).click();
-		waitforElement(dr, dr.findElement(By.xpath("//h1[contains(text(), 'Add Property')]")));
-		Assert.assertEquals(dr.findElement(By.xpath("//h1[contains(text(), 'Add Property')]")).getText(), "Add Property");
-		dr.findElement(By.xpath("//input[@placeholder = 'Search']")).sendKeys("QA Test Object");
+		waitforElement(dr, Pages.consignmentPage().addPropertyHeader);
+		Assert.assertEquals(Pages.consignmentPage().addPropertyHeader.getText(), "Add Property");
+		Pages.consignmentPage().addObjectSearch.sendKeys("QA Test Object");
 		Thread.sleep(1000);
 		dr.findElement(By.xpath("//div[@class = 'css-17pn9uc']/h4[contains(text(),'Test Object')]")).click();
-		// WebElement element = driver.findElement(By.id("id_of_element"));
 		((JavascriptExecutor) dr).executeScript("arguments[0].scrollIntoView(true);", dr.findElement(By
 				.xpath("//input[@placeholder = 'Object type']/ancestor::div[@class = 'sc-cSHVUG sc-dxgOiQ cFmSFh']")));
 		Thread.sleep(500);
@@ -121,17 +120,17 @@ public class Consignment extends SetupUtils {
 		dr.findElement(By.xpath("//span[contains(text(), 'Fine Art')]")).click();
 		Pages.auctionPage().departmentListBox.sendKeys("Contemporary Art" + Keys.ENTER);
 		Thread.sleep(1000);
-		dr.findElement(By.xpath("//input[@placeholder = 'Sale location']")).sendKeys("New York" + Keys.ENTER);
+		Pages.consignmentPage().inputSaleLocation.sendKeys("New York" + Keys.ENTER);
 		Thread.sleep(2000);
-		Select currency_dropdown = new Select(dr.findElement(By.xpath("//select[@name = 'currency']")));
+		Select currency_dropdown = new Select(Pages.consignmentPage().inputCurrencyDropdown);
 		currency_dropdown.selectByVisibleText("USD");
-		Assert.assertTrue(dr
-				.findElement(By
-						.xpath("//label[@for = 'estimate']/parent::div/following-sibling::div/div/div[contains(text(),'USD')]"))
+		Assert.assertTrue(Pages.consignmentPage().labelEstimateCurrencyUSD
 				.isDisplayed());
-		dr.findElement(By.xpath("//input[@label = 'Estimatelow']")).sendKeys("200");
-		dr.findElement(By.xpath("//input[@label = 'Estimatehigh']")).sendKeys("1000");
-		dr.findElement(By.xpath("//input[@label = 'reserve']")).sendKeys("200");
+		Pages.consignmentPage().inputEstimateLow.sendKeys("200");
+		Pages.consignmentPage().inputEstimateHigh.sendKeys("1000");
+		Assert.assertTrue(Pages.consignmentPage().labelReserveCurrencyUSD
+				.isDisplayed());
+		Pages.consignmentPage().inputReserve.sendKeys("200");
 		Pages.objectPage().createButton.click();
 		Thread.sleep(1000);
 		Assert.assertTrue(dr.findElement(By.xpath("//h1[contains(text(), 'QA Test Object')]")).isDisplayed());

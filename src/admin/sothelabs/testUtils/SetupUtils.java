@@ -114,13 +114,13 @@ public class SetupUtils extends ConnectToTestRail {
 
 	public static WebElement waitforElement(WebDriver dr, WebElement webElement) {
 		try {
-			WebDriverWait wait = new WebDriverWait(dr, 80);
+			WebDriverWait wait = new WebDriverWait(dr, 20);
 			return wait.until(ExpectedConditions.elementToBeClickable(webElement));
 		} catch (Exception e) {
 			Assert.fail("Unable to find Element on page: " + webElement);
 			return null;
 		} finally {
-			dr.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+			dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		}
 	}
 

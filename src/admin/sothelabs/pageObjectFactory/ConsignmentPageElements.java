@@ -48,7 +48,7 @@ public class ConsignmentPageElements extends SetupUtils {
 	@FindBy(xpath = "//h1[contains(text(), \"Welcome to Sotheby's Admin\")]")
 	public WebElement adminWelcomeHeader;
 	
-	@FindBy(xpath = "//button/span[contains(text(), 'New')]")
+	@FindBy(xpath = "//button/div[contains(text(), 'NEW')]")
 	public WebElement newButton;
 	
 	@FindBy(xpath = "//h1[@class = 'css-1cbuwhv']")
@@ -72,10 +72,10 @@ public class ConsignmentPageElements extends SetupUtils {
 	@FindBy(xpath = "//label[@for = 'consignmentNotes']/parent::div/following-sibling::div")
 	public WebElement consignmentNotesValue;
 	
-	@FindBy(xpath = "//img[@class = 'logo']")
+	@FindBy(xpath = "//img[@alt = \"Sotheby's\"]")
 	public WebElement sothebysLogo;
 	
-	@FindBy(xpath = "//a[@class = 'navLink'][@href ='/consignments']")
+	@FindBy(xpath = "//a[@href ='/consignments']")
 	public WebElement navItemConsignment;
 	
 	@FindBy(xpath = "//input[@type = 'search']")
@@ -95,6 +95,33 @@ public class ConsignmentPageElements extends SetupUtils {
 	
 	@FindBy(xpath = "//h1[contains(text(), 'New Consignment')]")
 	public WebElement newConsignemntHeader;
+	
+	@FindBy(xpath = "//h1[contains(text(), 'Add Property')]")
+	public WebElement addPropertyHeader;
+	
+	@FindBy(xpath = "//input[@placeholder = 'Search']")
+	public WebElement addObjectSearch;
+	
+	@FindBy(xpath = "//input[@placeholder = 'Sale location']")
+	public WebElement inputSaleLocation;
+	
+	@FindBy(xpath = "//select[@name = 'currency']")
+	public WebElement inputCurrencyDropdown;
+	
+	@FindBy(xpath = "//label[@for = 'estimate']/parent::div/following-sibling::div/div/div[contains(text(),'USD')]")
+	public WebElement labelEstimateCurrencyUSD;
+	
+	@FindBy(xpath = "//input[@label = 'Estimatelow']")
+	public WebElement inputEstimateLow;
+	
+	@FindBy(xpath = "//input[@label = 'Estimatehigh']")
+	public WebElement inputEstimateHigh;
+	
+	@FindBy(xpath = "//input[@label = 'reserve']")
+	public WebElement inputReserve;
+	
+	@FindBy(xpath = "//input[@label = 'reserve']/following-sibling::div[contains(text(), 'USD')]")
+	public WebElement labelReserveCurrencyUSD;
 	
 	public void loginIntoApplication(){
 		emailAddress.sendKeys(TestData.USERNAME);

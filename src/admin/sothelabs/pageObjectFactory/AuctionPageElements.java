@@ -41,7 +41,7 @@ public class AuctionPageElements extends SetupUtils {
 	@FindBy(xpath = "//div[@data-placeholder = 'Conditions Of Sale']")
 	public WebElement conditionTextEdit;
 
-	@FindBy(xpath = "//a[@class = 'navLink'][@href ='/auctions']")
+	@FindBy(xpath = "//a[@href ='/auctions']")
 	public WebElement navItemAuction;
 	
 	@FindBy(xpath = "//input[@id = 'start']")
