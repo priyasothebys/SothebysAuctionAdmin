@@ -17,7 +17,7 @@ import admin.sothelabs.testUtils.TestData;
 
 public class Consignment extends SetupUtils {
 
-	protected String consignment_title = "QA Automation+" + RandomStringUtils.randomAlphanumeric(8);
+	protected String consignment_title = "QA Automation+" + RandomStringUtils.randomAlphanumeric(15);
 
 	@Test(priority = 1, enabled = true)
 	public void createNewConsignment() throws InterruptedException, IOException {

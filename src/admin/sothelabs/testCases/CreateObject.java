@@ -13,7 +13,7 @@ import admin.sothelabs.testUtils.SetupUtils;
 
 public class CreateObject extends SetupUtils {
 
-	protected String title = "TestObject-" + RandomStringUtils.randomAlphanumeric(10);
+	protected String title = "TestObject-" + RandomStringUtils.randomAlphanumeric(15);
 
 	@Test(priority = 1, enabled = true)
 	public void createNewObject() throws InterruptedException {

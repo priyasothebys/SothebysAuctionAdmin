@@ -18,7 +18,7 @@ import admin.sothelabs.testUtils.SetupUtils;
 
 public class Auction extends SetupUtils {
 
-	protected String auction_title = "Auto Auction +" + RandomStringUtils.randomAlphanumeric(12);
+	protected String auction_title = "Auto Auction +" + RandomStringUtils.randomAlphanumeric(15);
 
 	@Test(priority = 1, enabled = true)
 	public void createAuction() throws InterruptedException, IOException, ParseException {
@@ -95,27 +95,21 @@ public class Auction extends SetupUtils {
 		Thread.sleep(2000);
 		Pages.consignmentPage().searchResultItem.click();
 		Pages.auctionPage().lotsLink.click();
+		Assert.assertTrue(dr.findElements(By.xpath("//div[@data-test-id = 'silc']/div[2]/div")).size() == 1);
 		dr.findElement(By
 				.xpath("//button[@data-test-id = 'add-to-auction-button']/parent::div/div/form/div/input[@type = 'search']"))
 				.sendKeys("QA Auto Script" + Keys.ENTER);
 		Actions action = new Actions(dr);
-		// WebElement add_lot = dr.findElement(By.xpath("//div[@class =
-		// 'sc-eIHaNI fNxtV']"));
-		// WebElement add_lot = dr.findElement(By.xpath("//p[@data-test-id =
-		// 'artist-name'][contains(text(), 'QA Auto script object')]"));
 		action.moveToElement(dr
 				.findElement(By.xpath("//p[@data-test-id = 'artist-name'][contains(text(), 'QA Auto script object')]")))
 				.build().perform();
-		// button[@contains(text(),'VIEW
-		// DETAILS')]/parent::div/parent::div/div/label
 		action.moveToElement(dr.findElement(By.xpath("//*/span/div/div/div[1]/div[1]/div[1]/div/label"))).click()
 				.build().perform();
 		Thread.sleep(2000);
-		// action.moveToElement(dr.findElement(By.xpath("//label[@class =
-		// 'css-1u3v222']"))).click().build().perform();
 		Assert.assertTrue(dr.findElement(By.xpath("//button[@data-test-id = 'add-to-auction-button']")).isEnabled());
 		dr.findElement(By.xpath("//button[@data-test-id = 'add-to-auction-button']")).click();
 		Thread.sleep(2000);
+		Assert.assertTrue(dr.findElements(By.xpath("//div[@data-test-id = 'silc']/div[2]/div")).size() != 1);
 		action.moveToElement(dr
 				.findElement(By.xpath("//p[@data-test-id = 'artist-name'][contains(text(), 'QA Auto script object')]")))
 				.build().perform();
@@ -123,20 +117,15 @@ public class Auction extends SetupUtils {
 		action.moveToElement(dr.findElement(By.xpath("//label[@class = 'css-1u3v222']"))).click().build().perform();
 		dr.findElement(By.xpath("//button[@data-test-id = 'dropdown-button']")).click();
 		Thread.sleep(3000);
-		// dr.findElement(By.xpath("//a[@class = 'sc-ccSCjj iQBvLS']")).click();
 		dr.findElement(By.xpath("//a[contains(text(),'Remove')]")).click();
 		Pages.auctionPage().confirmPublishButton.click();
 		Thread.sleep(3000);
-		dr.findElement(By
-				.xpath("//button[@data-test-id = 'add-to-auction-button']/parent::div/div/form/div/input[@type = 'search']"))
-				.sendKeys("QA Auto Script" + Keys.ENTER);
-		action.moveToElement(dr
-				.findElement(By.xpath("//p[@data-test-id = 'artist-name'][contains(text(), 'QA Auto script object')]")))
-				.build().perform();
+		Assert.assertTrue(dr.findElements(By.xpath("//div[@data-test-id = 'silc']/div[2]/div")).size() == 1);
+		/*Assert.assertTrue(dr.findElement(By.xpath("//button[contains(text(), 'VIEW DETAILS')]")).isDisplayed());
 		action.moveToElement(dr.findElement(By.xpath("//button[contains(text(), 'VIEW DETAILS')]"))).click().build()
 				.perform();
 		Assert.assertTrue(dr.findElement(By.xpath("//div[contains(text(), 'Title')]")).isDisplayed());
-		dr.findElement(By.xpath("//button[@data-test-id = 'close-modal']")).click();
+		dr.findElement(By.xpath("//button[@data-test-id = 'close-modal']")).click();*/
 		System.out.println("Lots were added and removed form auction successfully - " + auction_title);
 	}
 
