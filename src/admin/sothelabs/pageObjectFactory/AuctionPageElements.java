@@ -100,7 +100,7 @@ public class AuctionPageElements extends SetupUtils {
 		String start_date = format.format(curDate);
 		Calendar c = Calendar.getInstance();
 		c.setTime(new Date()); // Now use today date.
-		c.add(Calendar.DATE, 2); // Adding 1 days
+		c.add(Calendar.DATE, 1); // Adding 1 days
 		String end_date = format.format(c.getTime());
 		curDate.setTime(curDate.getTime() + 10 * 60000);// add 10 mins to current time
 		format = new SimpleDateFormat("hh");

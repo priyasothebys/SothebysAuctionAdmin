@@ -40,11 +40,11 @@ public class CreateObject extends SetupUtils {
 		Thread.sleep(2000);
 
 		// ---------------Attributes---------------------
-		Pages.objectPage().provenanceTextEdit.sendKeys("test" + Keys.ENTER);
+		Pages.objectPage().provenanceInput.sendKeys("test" + Keys.ENTER);
 		Thread.sleep(2000);
-		Pages.objectPage().exhibitionTextEdit.sendKeys("test" + Keys.ENTER);
+		Pages.objectPage().exhibitionInput.sendKeys("test" + Keys.ENTER);
 		Thread.sleep(2000);
-		Pages.objectPage().literatureTextEdit.sendKeys("test" + Keys.ENTER);
+		Pages.objectPage().literatureInput.sendKeys("test" + Keys.ENTER);
 		Thread.sleep(2000);
 		/*
 		 * Pages.objectPage().dimensionTextEdit.sendKeys("test");
@@ -122,48 +122,48 @@ public class CreateObject extends SetupUtils {
 		Pages.objectPage().descriptionTextEdit.sendKeys(description_edit + Keys.ENTER);
 		// ---------------Attributes---------------------
 		Thread.sleep(2000);
-		Pages.objectPage().provenanceTextEdit.clear();
-		Pages.objectPage().provenanceTextEdit.sendKeys(provenance_edit + Keys.ENTER);
+		Pages.objectPage().provenanceInput.clear();
+		Pages.objectPage().provenanceInput.sendKeys(provenance_edit + Keys.ENTER);
 		Thread.sleep(2000);
-		Pages.objectPage().exhibitionTextEdit.clear();
-		Pages.objectPage().exhibitionTextEdit.sendKeys(exhibition_edit + Keys.ENTER);
+		Pages.objectPage().exhibitionInput.clear();
+		Pages.objectPage().exhibitionInput.sendKeys(exhibition_edit + Keys.ENTER);
 		Thread.sleep(3000);
-		Pages.objectPage().literatureTextEdit.clear();
-		Pages.objectPage().literatureTextEdit.sendKeys(literature_edit + Keys.ENTER);
+		Pages.objectPage().literatureInput.clear();
+		Pages.objectPage().literatureInput.sendKeys(literature_edit + Keys.ENTER);
 		Thread.sleep(2000);
-		Pages.objectPage().dimensionTextEdit.clear();
-		Pages.objectPage().dimensionTextEdit.sendKeys("test");
+		Pages.objectPage().dimensionInput.clear();
+		Pages.objectPage().dimensionInput.sendKeys("test");
 
 		Pages.objectPage().materialsListBox.sendKeys("acrylic paint" + Keys.ENTER);
-		Pages.objectPage().heightTextEdit.clear();
-		Pages.objectPage().heightTextEdit.sendKeys("111");
+		Pages.objectPage().heightInput.clear();
+		Pages.objectPage().heightInput.sendKeys("111");
 		Select height_dropdown = new Select(Pages.objectPage().heightDropdown);
 		height_dropdown.selectByVisibleText("cm");
-		Pages.objectPage().widthTextEdit.clear();
-		Pages.objectPage().widthTextEdit.sendKeys("111");
+		Pages.objectPage().widthInput.clear();
+		Pages.objectPage().widthInput.sendKeys("111");
 		Select width_dropdown = new Select(Pages.objectPage().widthDropdown);
 		width_dropdown.selectByVisibleText("mm");
-		Pages.objectPage().depthTextEdit.clear();
-		Pages.objectPage().depthTextEdit.sendKeys("111");
+		Pages.objectPage().depthInput.clear();
+		Pages.objectPage().depthInput.sendKeys("111");
 		Select depth_dropdown = new Select(Pages.objectPage().depthDropdown);
 		depth_dropdown.selectByVisibleText("cm");
-		Pages.objectPage().lengthTextEdit.clear();
-		Pages.objectPage().lengthTextEdit.sendKeys("111");
+		Pages.objectPage().lengthInput.clear();
+		Pages.objectPage().lengthInput.sendKeys("111");
 		Select length_dropdown = new Select(Pages.objectPage().lengthDropdown);
 		length_dropdown.selectByVisibleText("cm");
-		Pages.objectPage().diameterTextEdit.clear();
-		Pages.objectPage().diameterTextEdit.sendKeys("111");
+		Pages.objectPage().diameterInput.clear();
+		Pages.objectPage().diameterInput.sendKeys("111");
 		Select diameter_dropdown = new Select(Pages.objectPage().diameterDropdown);
 		diameter_dropdown.selectByVisibleText("cm");
-		Pages.objectPage().weightTextEdit.clear();
-		Pages.objectPage().weightTextEdit.sendKeys("111");
+		Pages.objectPage().weightInput.clear();
+		Pages.objectPage().weightInput.sendKeys("111");
 		Select weight_dropdown = new Select(Pages.objectPage().weightDropdown);
 		weight_dropdown.selectByVisibleText("kg");
 		Pages.objectPage().countryListBox.sendKeys("India" + Keys.ENTER);
-		Pages.objectPage().signatureDetailsTextEdit.sendKeys("test");
+		Pages.objectPage().signatureDetailsInput.sendKeys("test");
 		Pages.objectPage().GenreListBox.sendKeys("Himalayan" + Keys.ENTER);
 		// ----------Research section--------------
-		Pages.objectPage().yearTextEdit.sendKeys("1800");
+		Pages.objectPage().yearInput.sendKeys("1800");
 		Select date_unit_dropdown = new Select(Pages.objectPage().unitDropdown);
 		date_unit_dropdown.selectByValue("AD");
 		Thread.sleep(2000);
