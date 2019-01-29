@@ -109,7 +109,7 @@ public class Consignment extends SetupUtils {
 		Assert.assertEquals(Pages.consignmentPage().addPropertyHeader.getText(), "Add Property");
 		Pages.consignmentPage().addObjectSearch.sendKeys("QA Test Object");
 		Thread.sleep(1000);
-		dr.findElement(By.xpath("//div[@class = 'css-17pn9uc']/h4[contains(text(),'Test Object')]")).click();
+		dr.findElement(By.xpath("//div[@id = 'react-autowhatever-1']/ul/li/div/div/div[2]/h4[contains(text(),'Test Object')]")).click();
 		((JavascriptExecutor) dr).executeScript("arguments[0].scrollIntoView(true);", dr.findElement(By
 				.xpath("//input[@placeholder = 'Object type']/ancestor::div[@class = 'sc-cSHVUG sc-dxgOiQ cFmSFh']")));
 		Thread.sleep(500);
