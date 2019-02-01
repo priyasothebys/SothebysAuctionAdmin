@@ -51,7 +51,7 @@ public class ConsignmentPageElements extends SetupUtils {
 	@FindBy(xpath = "//button/div[contains(text(), 'NEW')]")
 	public WebElement newButton;
 	
-	@FindBy(xpath = "//h1[@class = 'css-1cbuwhv']")
+	@FindBy(xpath = "//span[contains(text(), 'Account ID')]/ancestor::div/h1")
 	public WebElement consignment_header;
 	
 	@FindBy(xpath = "//label[@for = 'consignorName']/parent::div/following-sibling::div/div")

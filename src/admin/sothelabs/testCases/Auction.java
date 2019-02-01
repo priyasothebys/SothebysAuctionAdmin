@@ -37,7 +37,7 @@ public class Auction extends SetupUtils {
 		Thread.sleep(1000);
 		Pages.auctionPage().conditionTextEdit.sendKeys("Good Condition" + Keys.ENTER);
 		Thread.sleep(2000);
-		Pages.auctionPage().bidIncrementListBox.click();
+		Pages.auctionPage().bidIncrementListBox.get(2).click();
 		Thread.sleep(2000);
 		Pages.auctionPage().bidIncrementItem.click();
 		Pages.objectPage().uploadImage.sendKeys(imagePathBasedOnEnvt());

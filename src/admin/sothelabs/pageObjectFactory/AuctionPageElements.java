@@ -32,8 +32,9 @@ public class AuctionPageElements extends SetupUtils {
 	@FindBy(xpath = "//div[@data-placeholder = 'Overview']")
 	public WebElement overviewTextEdit;
 
-	@FindBy(xpath = "//div[@class = 'sc-cSHVUG dQvtQT']")
-	public WebElement bidIncrementListBox;
+	@FindBy(xpath = "//div[@role = 'combobox']/parent::div")
+	public List<WebElement> bidIncrementListBox;
+	//div[contains(text(), 'Bidding Increment')]/parent::div/following-sibling::div/div/div
 
 	@FindBy(xpath = "//div[contains(text(), 'Online only (CNY)')]")
 	public WebElement bidIncrementItem;
