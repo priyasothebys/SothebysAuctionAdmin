@@ -5,7 +5,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -118,8 +118,6 @@ public class AuctionPageElements extends SetupUtils {
 		selectElementFromList(startMinutePicker, min);
 		selectElementFromList(startMeredianPicker, meredian);
 		Thread.sleep(1000);
-//		((JavascriptExecutor) dr).executeScript("arguments[0].scrollIntoView(true);", Pages.auctionPage().endDate);
-//		Thread.sleep(500);
 		endDate.sendKeys(end_date + Keys.ENTER);
 		Thread.sleep(2000);
 		endTimePicker.click();
@@ -128,6 +126,7 @@ public class AuctionPageElements extends SetupUtils {
 		selectElementFromList(endMinutePicker, min);
 		selectElementFromList(endMeredianPicker, meredian);
 		Thread.sleep(1000);
+		dr.findElement(By.xpath("//div[contains(text(), 'Type')]")).click();
 	}
 
 	public void selectElementFromList(List<WebElement> list, String item) {

@@ -36,7 +36,7 @@ public class Auction extends SetupUtils {
 		Pages.auctionPage().overviewTextEdit.sendKeys("test" + Keys.ENTER);
 		Thread.sleep(1000);
 		Pages.auctionPage().conditionTextEdit.sendKeys("Good Condition" + Keys.ENTER);
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		Pages.auctionPage().bidIncrementListBox.get(2).click();
 		Thread.sleep(2000);
 		Pages.auctionPage().bidIncrementItem.click();
