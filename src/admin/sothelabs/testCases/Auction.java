@@ -44,9 +44,9 @@ public class Auction extends SetupUtils {
 		Thread.sleep(1000);
 		Pages.objectPage().createButton.click();
 		Thread.sleep(6000);
-		Assert.assertEquals(Pages.auctionPage().detailsLink.getAttribute("class"), "isActive");
+		Assert.assertEquals(Pages.auctionPage().detailsLink.getAttribute("class"), "active");
 		Assert.assertEquals(Pages.auctionPage().auctionTitleLabel.getText(), auction_title);
-		Assert.assertEquals(dr.findElement(By.xpath("//div[contains(text(), 'Created')]")).getText(), "CREATED");
+		Assert.assertEquals(dr.findElement(By.xpath("//div[contains(text(), 'Unpublished')]")).getText(), "Unpublished");
 		System.out.println("Auction Created Successfully : " + auction_title);
 	}
 
@@ -80,7 +80,7 @@ public class Auction extends SetupUtils {
 		Pages.auctionPage().publishButton.click();
 		Pages.auctionPage().confirmPublishButton.click();
 		Thread.sleep(1000);
-		Assert.assertEquals(Pages.auctionPage().publishStatus.getText(), "PUBLISHED");
+		Assert.assertEquals(Pages.auctionPage().publishStatus.getText(), "Published");
 		System.out.println("Auction Published Successfully : " + auction_title);
 	}
 

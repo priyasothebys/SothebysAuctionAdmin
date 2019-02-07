@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="11" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="AdminSmokeTestSuite" duration-ms="172653" started-at="2019-02-04T15:51:31Z" finished-at="2019-02-04T15:54:24Z">
+  <suite name="AdminSmokeTestSuite" duration-ms="179633" started-at="2019-02-07T15:44:20Z" finished-at="2019-02-07T15:47:20Z">
     <groups>
     </groups>
-    <test name="AdminSmokeTest" duration-ms="172653" started-at="2019-02-04T15:51:31Z" finished-at="2019-02-04T15:54:24Z">
+    <test name="AdminSmokeTest" duration-ms="179633" started-at="2019-02-07T15:44:20Z" finished-at="2019-02-07T15:47:20Z">
       <class name="admin.sothelabs.testCases.Consignment">
-        <test-method status="PASS" signature="createNewConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@3cda1055]" name="createNewConsignment" duration-ms="10048" started-at="2019-02-04T10:52:19Z" finished-at="2019-02-04T10:52:29Z">
+        <test-method status="PASS" signature="createNewConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@3cda1055]" name="createNewConsignment" duration-ms="10463" started-at="2019-02-07T10:45:09Z" finished-at="2019-02-07T10:45:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewConsignment -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Consignment@3cda1055]" name="afterMethodInvocation" is-config="true" duration-ms="687" started-at="2019-02-04T10:52:29Z" finished-at="2019-02-04T10:52:29Z">
+        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Consignment@3cda1055]" name="afterMethodInvocation" is-config="true" duration-ms="808" started-at="2019-02-07T10:45:20Z" finished-at="2019-02-07T10:45:21Z">
           <params>
             <param index="0">
               <value>
@@ -27,11 +27,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodInvocation -->
-        <test-method status="PASS" signature="editConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@3cda1055]" name="editConsignment" duration-ms="9297" started-at="2019-02-04T10:52:29Z" finished-at="2019-02-04T10:52:39Z">
+        <test-method status="PASS" signature="editConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@3cda1055]" name="editConsignment" duration-ms="9477" started-at="2019-02-07T10:45:21Z" finished-at="2019-02-07T10:45:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- editConsignment -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Consignment@3cda1055]" name="afterMethodInvocation" is-config="true" duration-ms="808" started-at="2019-02-04T10:52:39Z" finished-at="2019-02-04T10:52:39Z">
+        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Consignment@3cda1055]" name="afterMethodInvocation" is-config="true" duration-ms="782" started-at="2019-02-07T10:45:30Z" finished-at="2019-02-07T10:45:31Z">
           <params>
             <param index="0">
               <value>
@@ -47,11 +47,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodInvocation -->
-        <test-method status="PASS" signature="addObjectsToConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@3cda1055]" name="addObjectsToConsignment" duration-ms="13219" started-at="2019-02-04T10:52:39Z" finished-at="2019-02-04T10:52:53Z">
+        <test-method status="PASS" signature="addObjectsToConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@3cda1055]" name="addObjectsToConsignment" duration-ms="13698" started-at="2019-02-07T10:45:31Z" finished-at="2019-02-07T10:45:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addObjectsToConsignment -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Consignment@3cda1055]" name="afterMethodInvocation" is-config="true" duration-ms="881" started-at="2019-02-04T10:52:53Z" finished-at="2019-02-04T10:52:53Z">
+        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Consignment@3cda1055]" name="afterMethodInvocation" is-config="true" duration-ms="909" started-at="2019-02-07T10:45:45Z" finished-at="2019-02-07T10:45:46Z">
           <params>
             <param index="0">
               <value>
@@ -67,11 +67,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodInvocation -->
-        <test-method status="PASS" signature="removeObjectsFromConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@3cda1055]" name="removeObjectsFromConsignment" duration-ms="5281" started-at="2019-02-04T10:52:53Z" finished-at="2019-02-04T10:52:59Z">
+        <test-method status="PASS" signature="removeObjectsFromConsignment()[pri:0, instance:admin.sothelabs.testCases.Consignment@3cda1055]" name="removeObjectsFromConsignment" duration-ms="5288" started-at="2019-02-07T10:45:46Z" finished-at="2019-02-07T10:45:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeObjectsFromConsignment -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Consignment@3cda1055]" name="afterMethodInvocation" is-config="true" duration-ms="726" started-at="2019-02-04T10:52:59Z" finished-at="2019-02-04T10:52:59Z">
+        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Consignment@3cda1055]" name="afterMethodInvocation" is-config="true" duration-ms="836" started-at="2019-02-07T10:45:51Z" finished-at="2019-02-07T10:45:52Z">
           <params>
             <param index="0">
               <value>
@@ -89,15 +89,15 @@
         </test-method> <!-- afterMethodInvocation -->
       </class> <!-- admin.sothelabs.testCases.Consignment -->
       <class name="admin.sothelabs.testCases.CreateObject">
-        <test-method status="PASS" signature="startSession()[pri:0, instance:admin.sothelabs.testCases.CreateObject@7f690630]" name="startSession" is-config="true" duration-ms="11461" started-at="2019-02-04T10:51:20Z" finished-at="2019-02-04T10:51:31Z">
+        <test-method status="PASS" signature="startSession()[pri:0, instance:admin.sothelabs.testCases.CreateObject@7f690630]" name="startSession" is-config="true" duration-ms="10788" started-at="2019-02-07T10:44:09Z" finished-at="2019-02-07T10:44:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSession -->
-        <test-method status="PASS" signature="createNewObject()[pri:0, instance:admin.sothelabs.testCases.CreateObject@7f690630]" name="createNewObject" duration-ms="19280" started-at="2019-02-04T10:51:31Z" finished-at="2019-02-04T10:51:50Z">
+        <test-method status="PASS" signature="createNewObject()[pri:0, instance:admin.sothelabs.testCases.CreateObject@7f690630]" name="createNewObject" duration-ms="19354" started-at="2019-02-07T10:44:20Z" finished-at="2019-02-07T10:44:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewObject -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.CreateObject@7f690630]" name="afterMethodInvocation" is-config="true" duration-ms="822" started-at="2019-02-04T10:51:50Z" finished-at="2019-02-04T10:51:51Z">
+        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.CreateObject@7f690630]" name="afterMethodInvocation" is-config="true" duration-ms="787" started-at="2019-02-07T10:44:39Z" finished-at="2019-02-07T10:44:40Z">
           <params>
             <param index="0">
               <value>
@@ -113,11 +113,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodInvocation -->
-        <test-method status="PASS" signature="editObject()[pri:0, instance:admin.sothelabs.testCases.CreateObject@7f690630]" name="editObject" duration-ms="26600" started-at="2019-02-04T10:51:51Z" finished-at="2019-02-04T10:52:18Z">
+        <test-method status="PASS" signature="editObject()[pri:0, instance:admin.sothelabs.testCases.CreateObject@7f690630]" name="editObject" duration-ms="28367" started-at="2019-02-07T10:44:40Z" finished-at="2019-02-07T10:45:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- editObject -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.CreateObject@7f690630]" name="afterMethodInvocation" is-config="true" duration-ms="707" started-at="2019-02-04T10:52:18Z" finished-at="2019-02-04T10:52:19Z">
+        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.CreateObject@7f690630]" name="afterMethodInvocation" is-config="true" duration-ms="773" started-at="2019-02-07T10:45:09Z" finished-at="2019-02-07T10:45:09Z">
           <params>
             <param index="0">
               <value>
@@ -133,17 +133,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodInvocation -->
-        <test-method status="PASS" signature="quitSession()[pri:0, instance:admin.sothelabs.testCases.CreateObject@7f690630]" name="quitSession" is-config="true" duration-ms="826" started-at="2019-02-04T10:54:24Z" finished-at="2019-02-04T10:54:25Z">
+        <test-method status="PASS" signature="quitSession()[pri:0, instance:admin.sothelabs.testCases.CreateObject@7f690630]" name="quitSession" is-config="true" duration-ms="933" started-at="2019-02-07T10:47:20Z" finished-at="2019-02-07T10:47:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitSession -->
       </class> <!-- admin.sothelabs.testCases.CreateObject -->
       <class name="admin.sothelabs.testCases.Auction">
-        <test-method status="PASS" signature="createAuction()[pri:0, instance:admin.sothelabs.testCases.Auction@7a5d012c]" name="createAuction" duration-ms="26117" started-at="2019-02-04T10:52:59Z" finished-at="2019-02-04T10:53:26Z">
+        <test-method status="PASS" signature="createAuction()[pri:0, instance:admin.sothelabs.testCases.Auction@7a5d012c]" name="createAuction" duration-ms="26576" started-at="2019-02-07T10:45:52Z" finished-at="2019-02-07T10:46:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createAuction -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Auction@7a5d012c]" name="afterMethodInvocation" is-config="true" duration-ms="722" started-at="2019-02-04T10:53:26Z" finished-at="2019-02-04T10:53:26Z">
+        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Auction@7a5d012c]" name="afterMethodInvocation" is-config="true" duration-ms="901" started-at="2019-02-07T10:46:18Z" finished-at="2019-02-07T10:46:19Z">
           <params>
             <param index="0">
               <value>
@@ -159,11 +159,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodInvocation -->
-        <test-method status="PASS" signature="editAuction()[pri:0, instance:admin.sothelabs.testCases.Auction@7a5d012c]" name="editAuction" duration-ms="3394" started-at="2019-02-04T10:53:26Z" finished-at="2019-02-04T10:53:30Z">
+        <test-method status="PASS" signature="editAuction()[pri:0, instance:admin.sothelabs.testCases.Auction@7a5d012c]" name="editAuction" duration-ms="3448" started-at="2019-02-07T10:46:19Z" finished-at="2019-02-07T10:46:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- editAuction -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Auction@7a5d012c]" name="afterMethodInvocation" is-config="true" duration-ms="698" started-at="2019-02-04T10:53:30Z" finished-at="2019-02-04T10:53:30Z">
+        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Auction@7a5d012c]" name="afterMethodInvocation" is-config="true" duration-ms="1044" started-at="2019-02-07T10:46:23Z" finished-at="2019-02-07T10:46:24Z">
           <params>
             <param index="0">
               <value>
@@ -179,11 +179,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodInvocation -->
-        <test-method status="PASS" signature="publishAuction()[pri:0, instance:admin.sothelabs.testCases.Auction@7a5d012c]" name="publishAuction" duration-ms="7249" started-at="2019-02-04T10:53:30Z" finished-at="2019-02-04T10:53:38Z">
+        <test-method status="PASS" signature="publishAuction()[pri:0, instance:admin.sothelabs.testCases.Auction@7a5d012c]" name="publishAuction" duration-ms="7609" started-at="2019-02-07T10:46:24Z" finished-at="2019-02-07T10:46:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- publishAuction -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Auction@7a5d012c]" name="afterMethodInvocation" is-config="true" duration-ms="818" started-at="2019-02-04T10:53:38Z" finished-at="2019-02-04T10:53:38Z">
+        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Auction@7a5d012c]" name="afterMethodInvocation" is-config="true" duration-ms="878" started-at="2019-02-07T10:46:31Z" finished-at="2019-02-07T10:46:32Z">
           <params>
             <param index="0">
               <value>
@@ -199,11 +199,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodInvocation -->
-        <test-method status="PASS" signature="addAndRemoveLots()[pri:0, instance:admin.sothelabs.testCases.Auction@7a5d012c]" name="addAndRemoveLots" duration-ms="19784" started-at="2019-02-04T10:53:38Z" finished-at="2019-02-04T10:53:58Z">
+        <test-method status="PASS" signature="addAndRemoveLots()[pri:0, instance:admin.sothelabs.testCases.Auction@7a5d012c]" name="addAndRemoveLots" duration-ms="20911" started-at="2019-02-07T10:46:32Z" finished-at="2019-02-07T10:46:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addAndRemoveLots -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Auction@7a5d012c]" name="afterMethodInvocation" is-config="true" duration-ms="653" started-at="2019-02-04T10:53:58Z" finished-at="2019-02-04T10:53:59Z">
+        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Auction@7a5d012c]" name="afterMethodInvocation" is-config="true" duration-ms="813" started-at="2019-02-07T10:46:53Z" finished-at="2019-02-07T10:46:54Z">
           <params>
             <param index="0">
               <value>
@@ -219,11 +219,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodInvocation -->
-        <test-method status="PASS" signature="addAndPublishLots()[pri:0, instance:admin.sothelabs.testCases.Auction@7a5d012c]" name="addAndPublishLots" duration-ms="23851" started-at="2019-02-04T10:53:59Z" finished-at="2019-02-04T10:54:23Z">
+        <test-method status="PASS" signature="addAndPublishLots()[pri:0, instance:admin.sothelabs.testCases.Auction@7a5d012c]" name="addAndPublishLots" duration-ms="25112" started-at="2019-02-07T10:46:54Z" finished-at="2019-02-07T10:47:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addAndPublishLots -->
-        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Auction@7a5d012c]" name="afterMethodInvocation" is-config="true" duration-ms="995" started-at="2019-02-04T10:54:23Z" finished-at="2019-02-04T10:54:24Z">
+        <test-method status="PASS" signature="afterMethodInvocation(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:admin.sothelabs.testCases.Auction@7a5d012c]" name="afterMethodInvocation" is-config="true" duration-ms="781" started-at="2019-02-07T10:47:19Z" finished-at="2019-02-07T10:47:20Z">
           <params>
             <param index="0">
               <value>
