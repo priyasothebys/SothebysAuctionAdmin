@@ -18,7 +18,7 @@ public class ConsignmentPageElements extends SetupUtils {
 	@FindBy(xpath = "//select[@name = 'ownerType']")
 	public WebElement ownerTypeDropdown;
 	
-	@FindBy(xpath = "//div[@id = 'react-autowhatever-1']")
+	@FindBy(xpath = "//input[@placeholder = 'Source Office']")
 	public WebElement sourceOfficeDropdown;
 	
 	@FindBy(xpath = "//input[@label = 'consignmentTitle']")
@@ -63,7 +63,7 @@ public class ConsignmentPageElements extends SetupUtils {
 	@FindBy(xpath = "//label[@for = 'ownerType']/parent::div/following-sibling::div/div")
 	public WebElement ownerTypeValue;
 	
-	@FindBy(xpath = "//div[@class = 'sc-kEYyzF iNGUkE']/span")
+	@FindBy(xpath = "//label[@for = 'sourceOffice']/parent::div/following-sibling::div/div/div/span")
 	public WebElement sourceOfficeValue;
 	
 	@FindBy(xpath = "//label[@for = 'consignmentTitle']/parent::div/following-sibling::div/div")

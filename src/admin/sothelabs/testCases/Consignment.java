@@ -74,7 +74,7 @@ public class Consignment extends SetupUtils {
 		Pages.consignmentPage().consignmentTitle.clear();
 		Pages.consignmentPage().consignmentTitle.sendKeys(consignment_title_edit);
 		Actions actions = new Actions(dr);
-		actions.moveToElement(dr.findElement(By.xpath("//div[@class = 'sc-kGXeez gddReB']"))).click();
+		actions.moveToElement(dr.findElement(By.xpath("//div[@data-test-id = 'sourceOffice']/div/div"))).click();
 		Thread.sleep(2000);
 		actions.sendKeys("Abu Dhabi");
 		actions.sendKeys(Keys.ENTER).build().perform();;

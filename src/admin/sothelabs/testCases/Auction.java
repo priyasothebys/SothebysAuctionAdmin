@@ -76,6 +76,7 @@ public class Auction extends SetupUtils {
 		Pages.consignmentPage().searchSubmitButton.click();
 		Thread.sleep(2000);
 		Pages.consignmentPage().searchResultItem.click();
+		Thread.sleep(2000);
 		waitforElement(dr, Pages.auctionPage().publishButton);
 		Pages.auctionPage().publishButton.click();
 		Pages.auctionPage().confirmPublishButton.click();
