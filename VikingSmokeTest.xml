@@ -6,10 +6,10 @@
 			 <class name="admin.sothelabs.testCases.CreateObject">
 				<methods>
 					<include name="createNewObject" />
-					<include name="editObject" />
+					<exclude name="editObject" />
 				</methods>
-			</class>
-			<class name="admin.sothelabs.testCases.Consignment">
+			  </class>
+			<!--<class name="admin.sothelabs.testCases.Consignment">
 				<methods>
 					<include name="createNewConsignment" />
 					<include name="editConsignment" />
@@ -26,7 +26,7 @@
 					<include name="addAndRemoveLots" />
 					<include name="addAndPublishLots" />
 				</methods>
-			</class>
+			</class>-->
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
